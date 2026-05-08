@@ -275,6 +275,371 @@ D) Both AWS and the customer jointly
 
 ---
 
+## Additional Practice Questions
+
+**Q21:** A company needs to process 10 million customer reviews for sentiment analysis. The analysis doesn't need to be real-time. Which approach is MOST cost-effective?
+
+A) Amazon Bedrock on-demand with Claude 3 Opus  
+B) Amazon Bedrock batch processing with Claude 3 Haiku  
+C) Amazon Comprehend real-time API  
+D) Amazon SageMaker real-time endpoint  
+
+**Answer:** B) Amazon Bedrock batch processing with Claude 3 Haiku
+
+**Explanation:** 
+- Batch processing is cheaper than real-time (no need for immediate results)
+- Haiku is the most cost-effective model for simple tasks like sentiment analysis
+- Bedrock batch can process large volumes efficiently
+- Comprehend could work but Bedrock batch with Haiku is more cost-effective for this volume
+
+---
+
+**Q22:** A healthcare company is building an AI system to analyze patient records. Which combination of AWS services provides the BEST security and compliance?
+
+A) Amazon Bedrock + S3 + CloudWatch  
+B) Amazon Bedrock + Guardrails + VPC + CloudTrail + KMS  
+C) Amazon SageMaker + EC2 + CloudWatch  
+D) Amazon Comprehend Medical + S3  
+
+**Answer:** B) Amazon Bedrock + Guardrails + VPC + CloudTrail + KMS
+
+**Explanation:**
+- Bedrock: HIPAA-eligible foundation model service
+- Guardrails: PII detection and redaction
+- VPC: Network isolation
+- CloudTrail: Complete audit trail for compliance
+- KMS: Encryption key management
+This combination provides defense-in-depth for healthcare data.
+
+---
+
+**Q23:** A model is generating responses that include information not present in the provided context documents. Which technique would BEST address this issue?
+
+A) Increase temperature parameter  
+B) Use Bedrock Guardrails with contextual grounding  
+C) Fine-tune the model  
+D) Increase max_tokens  
+
+**Answer:** B) Use Bedrock Guardrails with contextual grounding
+
+**Explanation:**
+- Contextual grounding ensures responses are based on provided context
+- Blocks responses that aren't grounded in source documents
+- Directly addresses hallucination problem
+- Temperature/max_tokens don't solve hallucination
+- Fine-tuning is expensive and doesn't guarantee grounding
+
+---
+
+**Q24:** A company wants to build a chatbot that can check order status, process returns, and answer FAQs. Which service is MOST appropriate?
+
+A) Amazon Lex  
+B) Amazon Bedrock Agents  
+C) Amazon Comprehend  
+D) Amazon Q Business  
+
+**Answer:** B) Amazon Bedrock Agents
+
+**Explanation:**
+- Agents can perform actions (check orders, process returns) via API calls
+- Can also answer questions (FAQs) using knowledge bases
+- Lex is for conversational interfaces but limited action capabilities
+- Comprehend is for text analysis, not chatbots
+- Q Business is for enterprise knowledge workers, not customer-facing
+
+---
+
+**Q25:** A model trained on historical hiring data shows 85% accuracy for male candidates but only 68% accuracy for female candidates. What is this an example of?
+
+A) Overfitting  
+B) Underfitting  
+C) Demographic disparity bias  
+D) High variance  
+
+**Answer:** C) Demographic disparity bias
+
+**Explanation:**
+- Different accuracy across demographic groups indicates bias
+- Model performs worse for underrepresented group (female candidates)
+- This is a fairness issue, not a technical ML issue
+- Overfitting/underfitting relate to model complexity, not fairness
+
+---
+
+**Q26:** Which inference parameter should be set to 0 for tasks requiring deterministic, consistent outputs?
+
+A) max_tokens  
+B) top_p  
+C) temperature  
+D) top_k  
+
+**Answer:** C) temperature
+
+**Explanation:**
+- Temperature=0 makes model deterministic (always picks highest probability token)
+- Same input always produces same output
+- Critical for tasks like classification, data extraction
+- top_p and top_k affect diversity but don't guarantee determinism
+- max_tokens only controls output length
+
+---
+
+**Q27:** A company has a 2,000-token system prompt that's used in every request. Which feature would MOST reduce costs?
+
+A) Use a smaller model  
+B) Enable prompt caching  
+C) Reduce max_tokens  
+D) Use batch processing  
+
+**Answer:** B) Enable prompt caching
+
+**Explanation:**
+- Prompt caching reduces cost for repeated context (75% discount on cached tokens)
+- 2,000 tokens repeated in every request = high savings potential
+- Smaller model helps but caching addresses the specific problem
+- max_tokens affects output, not the system prompt cost
+- Batch processing doesn't cache prompts
+
+---
+
+**Q28:** Which AWS service should be used to detect if a model's prediction accuracy is degrading over time in production?
+
+A) Amazon CloudWatch  
+B) Amazon SageMaker Model Monitor  
+C) AWS CloudTrail  
+D) Amazon SageMaker Clarify  
+
+**Answer:** B) Amazon SageMaker Model Monitor
+
+**Explanation:**
+- Model Monitor specifically detects data drift and model drift
+- Tracks prediction accuracy over time
+- Alerts when performance degrades
+- CloudWatch monitors infrastructure, not model performance
+- CloudTrail is for audit logging
+- Clarify is for bias detection, not drift
+
+---
+
+**Q29:** A company needs to generate product descriptions with a consistent brand voice and specific terminology. Which approach is MOST appropriate?
+
+A) Zero-shot prompting  
+B) RAG with product documentation  
+C) Fine-tuning on brand content  
+D) Increase temperature to 1.0  
+
+**Answer:** C) Fine-tuning on brand content
+
+**Explanation:**
+- Fine-tuning learns specific writing style and terminology
+- Best for consistent brand voice across all outputs
+- RAG provides facts but doesn't learn style
+- Zero-shot won't capture specific brand voice
+- High temperature increases creativity but reduces consistency
+
+---
+
+**Q30:** Which metric measures the overlap between generated summary and reference summary at the word level?
+
+A) BERTScore  
+B) BLEU  
+C) ROUGE-1  
+D) F1 Score  
+
+**Answer:** C) ROUGE-1
+
+**Explanation:**
+- ROUGE-1 measures unigram (word) overlap
+- Specifically designed for summarization evaluation
+- BERTScore measures semantic similarity, not word overlap
+- BLEU is for translation
+- F1 is for classification
+
+---
+
+**Q31:** A financial services company needs to ensure AI responses don't include customer account numbers or SSNs. Which Bedrock feature should they implement?
+
+A) Content filters  
+B) Topic denial  
+C) PII detection and redaction  
+D) Contextual grounding  
+
+**Answer:** C) PII detection and redaction
+
+**Explanation:**
+- PII detection specifically identifies and blocks/redacts sensitive data (SSN, account numbers)
+- Content filters block harmful content categories
+- Topic denial blocks discussion topics
+- Contextual grounding ensures factual accuracy
+
+---
+
+**Q32:** Which AWS service provides on-demand access to compliance reports like SOC 2 and HIPAA?
+
+A) AWS Config  
+B) AWS Audit Manager  
+C) AWS Artifact  
+D) AWS CloudTrail  
+
+**Answer:** C) AWS Artifact
+
+**Explanation:**
+- Artifact provides downloadable compliance reports and agreements
+- Config tracks resource configuration
+- Audit Manager automates compliance auditing
+- CloudTrail logs API activity
+
+---
+
+**Q33:** A model needs to classify images as containing cats, dogs, or neither. This is an example of which type of learning?
+
+A) Supervised learning - regression  
+B) Supervised learning - classification  
+C) Unsupervised learning - clustering  
+D) Reinforcement learning  
+
+**Answer:** B) Supervised learning - classification
+
+**Explanation:**
+- Labeled data (images with cat/dog/neither labels) = supervised
+- Discrete categories (cat, dog, neither) = classification
+- Regression predicts continuous values
+- Clustering finds groups without labels
+- Reinforcement learning uses rewards
+
+---
+
+**Q34:** Which combination provides the MOST comprehensive evaluation of a RAG system?
+
+A) ROUGE score only  
+B) Retrieval accuracy + answer faithfulness + citation correctness  
+C) BERTScore only  
+D) User satisfaction only  
+
+**Answer:** B) Retrieval accuracy + answer faithfulness + citation correctness
+
+**Explanation:**
+- RAG has multiple components that need evaluation
+- Retrieval accuracy: Are relevant documents found?
+- Answer faithfulness: Does answer match sources?
+- Citation correctness: Are sources properly cited?
+- Single metrics miss important aspects
+- User satisfaction is important but not sufficient alone
+
+---
+
+**Q35:** A company wants to reduce the carbon footprint of their ML training workloads. Which AWS service should they use?
+
+A) Amazon EC2 with GPU instances  
+B) AWS Trainium  
+C) Amazon SageMaker with default settings  
+D) AWS Lambda  
+
+**Answer:** B) AWS Trainium
+
+**Explanation:**
+- Trainium is custom ML training chip optimized for energy efficiency
+- 40% less energy than comparable GPU instances
+- Specifically designed for sustainable ML training
+- Lambda not suitable for ML training
+- Default SageMaker uses standard instances
+
+---
+
+**Q36:** Which technique generates multiple responses to the same question and checks for agreement to detect hallucinations?
+
+A) RAG grounding  
+B) Self-consistency  
+C) Fine-tuning  
+D) Prompt caching  
+
+**Answer:** B) Self-consistency
+
+**Explanation:**
+- Self-consistency generates multiple responses and checks agreement
+- High agreement = likely accurate
+- Low agreement = potential hallucination
+- RAG grounds in documents
+- Fine-tuning doesn't detect hallucinations
+- Prompt caching is for cost optimization
+
+---
+
+**Q37:** A model shows 99% accuracy on training data but only 65% on test data. This indicates:
+
+A) High bias (underfitting)  
+B) High variance (overfitting)  
+C) Good generalization  
+D) Demographic disparity  
+
+**Answer:** B) High variance (overfitting)
+
+**Explanation:**
+- Large gap between training and test performance = overfitting
+- Model memorized training data instead of learning patterns
+- High variance means model is too sensitive to training data
+- High bias would show poor performance on both
+- Good generalization would show similar performance
+- Demographic disparity is about fairness across groups
+
+---
+
+**Q38:** Which AWS service enables human reviewers to evaluate AI model outputs for quality assurance?
+
+A) Amazon SageMaker Clarify  
+B) Amazon Augmented AI (A2I)  
+C) Amazon Bedrock Guardrails  
+D) AWS CloudTrail  
+
+**Answer:** B) Amazon Augmented AI (A2I)
+
+**Explanation:**
+- A2I provides human review workflows for ML predictions
+- Integrates with SageMaker and other services
+- Clarify detects bias, doesn't provide human review
+- Guardrails filter content automatically
+- CloudTrail logs API calls
+
+---
+
+**Q39:** A company needs to translate customer support conversations in real-time across 50 languages. Which service is MOST appropriate?
+
+A) Amazon Bedrock with multilingual model  
+B) Amazon Translate  
+C) Amazon Comprehend  
+D) Amazon Polly  
+
+**Answer:** B) Amazon Translate
+
+**Explanation:**
+- Translate is purpose-built for language translation
+- Supports 75+ languages
+- Optimized for translation tasks
+- Bedrock could work but Translate is specialized and more cost-effective
+- Comprehend analyzes text, doesn't translate
+- Polly converts text to speech
+
+---
+
+**Q40:** Which metric would be MOST important for evaluating a medical diagnosis AI system?
+
+A) Precision (minimize false positives)  
+B) Recall (minimize false negatives)  
+C) Accuracy (overall correctness)  
+D) F1 Score (balance)  
+
+**Answer:** B) Recall (minimize false negatives)
+
+**Explanation:**
+- In medical diagnosis, missing a disease (false negative) is catastrophic
+- Better to have false alarms than miss diagnoses
+- Recall measures ability to catch all positive cases
+- Precision is important but recall is critical for safety
+- Accuracy can be misleading with imbalanced data
+- F1 balances both but recall is priority for medical use
+
+---
+
 ## Exam Tips and Strategies
 
 ### Before the Exam

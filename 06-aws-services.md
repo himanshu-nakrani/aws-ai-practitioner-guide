@@ -20,6 +20,136 @@
 | **Amazon Personalize** | Recommendation engine | Personalized user experiences |
 | **AWS Transform** | AI-powered data transformation | Automated data mapping |
 
+#### Deep Dive: When to Use Which Service
+
+**Scenario 1: Need to generate text**
+
+```
+Simple text generation (summaries, content):
+→ Amazon Bedrock with Claude/Titan
+Why: Direct API access, pay-per-token, no infrastructure
+
+Custom model with specific style:
+→ Amazon Bedrock with fine-tuning
+Why: Adapt model to your writing style/domain
+
+Build from scratch with full control:
+→ Amazon SageMaker with custom model
+Why: Complete control over architecture and training
+```
+
+**Scenario 2: Need Q&A over documents**
+
+```
+Quick setup, managed solution:
+→ Amazon Bedrock Knowledge Bases
+Why: Fully managed RAG, automatic chunking/embedding
+
+Enterprise search with advanced features:
+→ Amazon Kendra
+Why: ML-powered search, connectors to 50+ data sources
+
+Custom RAG implementation:
+→ Amazon Bedrock + OpenSearch + Lambda
+Why: Full control over retrieval and generation
+```
+
+**Scenario 3: Need AI assistant**
+
+```
+Enterprise knowledge worker assistant:
+→ Amazon Q Business
+Why: Pre-built, integrates with enterprise apps (Slack, SharePoint)
+
+Developer coding assistant:
+→ Amazon Q Developer
+Why: Code generation, debugging, optimization
+
+Custom chatbot for specific use case:
+→ Amazon Bedrock Agents
+Why: Custom actions, API integrations, guardrails
+```
+
+**Scenario 4: Need multi-step task automation**
+
+```
+Simple workflow (3-5 steps):
+→ Amazon Bedrock Agents with action groups
+Why: Managed, easy to configure
+
+Complex workflow (10+ steps, conditional logic):
+→ Amazon Bedrock Agents + Step Functions
+Why: Orchestration for complex workflows
+
+Multi-agent collaboration:
+→ Multiple Bedrock Agents with AgentCore
+Why: Specialized agents with identity management
+```
+
+#### Service Comparison Matrix
+
+**Text Generation Services:**
+
+| Service | Best For | Pros | Cons | Cost |
+|---------|----------|------|------|------|
+| **Bedrock** | General text generation | Easy, managed, multiple models | Less control | $0.25-$15/1M tokens |
+| **SageMaker** | Custom models | Full control, any model | Complex setup | Variable (compute) |
+| **Q Business** | Enterprise assistant | Pre-built, integrated | Less customizable | $20/user/month |
+
+**Document Q&A Services:**
+
+| Service | Best For | Pros | Cons | Cost |
+|---------|----------|------|------|------|
+| **Bedrock KB** | Quick RAG setup | Fully managed, easy | Limited customization | $0.10/1K chunks + inference |
+| **Kendra** | Enterprise search | Advanced search, connectors | Expensive | $810/month + queries |
+| **Custom RAG** | Full control | Complete flexibility | Complex to build | Variable |
+
+**Real-World Service Selection Examples:**
+
+```
+Example 1: Startup building customer support chatbot
+Budget: $500/month
+Volume: 10K queries/month
+
+Decision: Amazon Bedrock + Knowledge Bases
+- Bedrock: $25/month (10K queries × 200 tokens × $0.00125/1K)
+- Knowledge Bases: $50/month (document storage + embeddings)
+- Total: $75/month (well under budget)
+
+Why not SageMaker: Too complex for small team
+Why not Kendra: $810/month minimum (over budget)
+```
+
+```
+Example 2: Enterprise with 10,000 employees
+Need: Company-wide AI assistant
+Budget: $200K/year
+
+Decision: Amazon Q Business
+- Cost: $20/user/month × 10,000 = $200K/month
+- Wait, that's $2.4M/year (over budget!)
+
+Revised Decision: Amazon Q Business for 500 power users
+- Cost: $20 × 500 = $10K/month = $120K/year
+- Plus: Custom Bedrock chatbot for general queries
+- Cost: $30K/year
+- Total: $150K/year (under budget)
+```
+
+```
+Example 3: Healthcare company analyzing medical records
+Requirements: HIPAA compliance, high accuracy, audit trail
+
+Decision: Amazon Bedrock + Guardrails + CloudTrail
+- Bedrock: HIPAA eligible
+- Guardrails: PII detection/redaction
+- CloudTrail: Complete audit trail
+- VPC: Private network isolation
+
+Why not public APIs: HIPAA compliance requirements
+Why not open-source: Need managed security and compliance
+```
+
 ---
 
 ## Machine Learning Platform
@@ -260,3 +390,213 @@
 
 ### Need automated compliance audits?
 → AWS Audit Manager
+
+---
+
+## Exam-Focused Service Patterns
+
+### Pattern 1: "Cost-Effective Solution"
+```
+Question mentions: "minimize cost", "budget-conscious", "cost-effective"
+
+Answer Priority:
+1. Managed services over custom (less operational cost)
+2. Smaller models over larger (Haiku over Opus)
+3. Batch processing over real-time (when acceptable)
+4. Spot instances for training
+5. Graviton/Inferentia over x86/GPU
+```
+
+### Pattern 2: "Quick Setup / Time to Market"
+```
+Question mentions: "quickly deploy", "minimal setup", "rapid prototype"
+
+Answer Priority:
+1. Bedrock over SageMaker (no infrastructure)
+2. Pre-trained models over custom training
+3. Bedrock Knowledge Bases over custom RAG
+4. SageMaker Autopilot over manual training
+5. Q Business over custom chatbot
+```
+
+### Pattern 3: "High Accuracy / Mission Critical"
+```
+Question mentions: "high accuracy", "critical", "medical", "financial"
+
+Answer Priority:
+1. Larger models (Opus over Haiku)
+2. Fine-tuning for domain-specific accuracy
+3. Human review (A2I) for critical decisions
+4. Multiple validation layers
+5. Bias detection (Clarify) for fairness
+```
+
+### Pattern 4: "Compliance / Security"
+```
+Question mentions: "HIPAA", "PCI", "GDPR", "sensitive data"
+
+Answer Priority:
+1. Bedrock Guardrails for PII detection
+2. VPC/PrivateLink for network isolation
+3. KMS for encryption
+4. CloudTrail for audit logging
+5. AWS Artifact for compliance reports
+```
+
+### Pattern 5: "Real-Time vs Batch"
+```
+Real-Time indicators: "immediate", "live", "interactive", "chatbot"
+→ Bedrock on-demand, SageMaker real-time endpoints
+
+Batch indicators: "nightly", "bulk", "scheduled", "millions of records"
+→ Bedrock batch, SageMaker batch transform, Forecast
+```
+
+### Pattern 6: "Custom vs Managed"
+```
+Custom indicators: "specific requirements", "unique architecture", "full control"
+→ SageMaker with custom models
+
+Managed indicators: "quick setup", "standard use case", "minimal maintenance"
+→ Bedrock, Comprehend, Rekognition, Kendra
+```
+
+---
+
+## Service Integration Patterns
+
+### Pattern 1: RAG Application
+```
+Components:
+1. Amazon S3 (document storage)
+2. Amazon Bedrock Knowledge Bases (RAG orchestration)
+   OR
+   - Amazon Titan Embeddings (vectorization)
+   - Amazon OpenSearch (vector storage)
+   - AWS Lambda (retrieval logic)
+3. Amazon Bedrock (generation)
+4. Amazon Bedrock Guardrails (safety)
+5. Amazon CloudWatch (monitoring)
+```
+
+### Pattern 2: AI Agent with Actions
+```
+Components:
+1. Amazon Bedrock Agents (orchestration)
+2. AWS Lambda (action execution)
+3. Amazon DynamoDB (state storage)
+4. Amazon API Gateway (external API integration)
+5. Amazon Bedrock Guardrails (safety)
+6. Amazon CloudWatch (logging)
+```
+
+### Pattern 3: ML Pipeline
+```
+Components:
+1. Amazon S3 (data lake)
+2. AWS Glue (data preparation)
+3. Amazon SageMaker (training)
+4. SageMaker Model Registry (versioning)
+5. SageMaker Endpoints (deployment)
+6. SageMaker Model Monitor (drift detection)
+7. Amazon CloudWatch (metrics)
+```
+
+### Pattern 4: Content Moderation
+```
+Components:
+1. Amazon Bedrock (content generation)
+2. Amazon Bedrock Guardrails (content filtering)
+3. Amazon Comprehend (toxicity detection)
+4. Amazon Augmented AI (human review)
+5. Amazon S3 (flagged content storage)
+6. Amazon SNS (alert notifications)
+```
+
+---
+
+## Cost Optimization Strategies by Service
+
+### Amazon Bedrock
+```
+1. Use smaller models (Haiku vs Opus) for simple tasks
+2. Implement prompt caching for repeated context
+3. Batch requests when real-time not needed
+4. Use provisioned throughput for predictable high volume
+5. Optimize max_tokens to avoid unnecessary generation
+```
+
+### Amazon SageMaker
+```
+1. Use Spot instances for training (70% discount)
+2. Use Inferentia for inference (60% cheaper than GPU)
+3. Use SageMaker Savings Plans (64% discount)
+4. Auto-scale endpoints based on traffic
+5. Use batch transform for offline inference
+```
+
+### Amazon Kendra
+```
+1. Use Developer edition for <10K documents
+2. Implement caching for frequent queries
+3. Use connector scheduling to reduce index updates
+4. Archive old documents to reduce index size
+```
+
+### General AI/ML Cost Optimization
+```
+1. Right-size compute instances
+2. Use Graviton instances (20% cheaper)
+3. Implement auto-scaling
+4. Set up budget alerts
+5. Use AWS Cost Explorer to identify waste
+6. Delete unused models and endpoints
+7. Use S3 Intelligent-Tiering for data
+```
+
+---
+
+## Exam Tips: Service Selection
+
+**When you see these keywords:**
+
+| Keyword | Think Service |
+|---------|---------------|
+| "Foundation model" | Bedrock |
+| "Custom ML model" | SageMaker |
+| "Sentiment analysis" | Comprehend |
+| "Image recognition" | Rekognition |
+| "Document extraction" | Textract |
+| "Speech-to-text" | Transcribe |
+| "Text-to-speech" | Polly |
+| "Translation" | Translate |
+| "Chatbot" | Lex or Bedrock Agents |
+| "Q&A over documents" | Bedrock Knowledge Bases |
+| "Enterprise search" | Kendra |
+| "Recommendations" | Personalize |
+| "Time-series forecast" | Forecast |
+| "Anomaly detection" | Lookout for Metrics |
+| "Bias detection" | SageMaker Clarify |
+| "Human review" | Augmented AI (A2I) |
+| "Content filtering" | Bedrock Guardrails |
+| "Compliance reports" | AWS Artifact |
+| "Agent" | Bedrock Agents |
+
+**Common Exam Traps:**
+
+```
+Trap 1: "Use SageMaker for everything"
+Reality: Bedrock is better for FM use cases
+
+Trap 2: "Always use largest model"
+Reality: Right-size model to task (Haiku often sufficient)
+
+Trap 3: "Build custom solution"
+Reality: Use managed services when available
+
+Trap 4: "Ignore cost"
+Reality: Cost optimization is tested on exam
+
+Trap 5: "One service per problem"
+Reality: Often need multiple services integrated
+```

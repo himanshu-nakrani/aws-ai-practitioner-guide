@@ -59,18 +59,89 @@ Welcome to your comprehensive study guide for the AWS Certified AI Practitioner 
 ```
 aws-ai-practitioner-guide/
 ├── README.md                                ← You are here
-├── 01-ai-ml-fundamentals.md                 ← Domain 1 (20%)
-├── 02-generative-ai-fundamentals.md         ← Domain 2 (24%)
-├── 03-foundation-model-applications.md      ← Domain 3 (28%)
-├── 04-guidelines-responsible-ai.md          ← Domain 4 (14%)
-├── 05-security-compliance-governance.md     ← Domain 5 (14%)
-├── 06-aws-services.md                       ← All in-scope AWS services
-├── 07-prompt-engineering.md                 ← Prompt engineering deep dive
-├── 08-practice-questions.md                 ← Sample Qs & exam tips
+├── 01-ai-ml-fundamentals.md                 ← Domain 1 (20%) ✅ ENRICHED
+├── 02-generative-ai-fundamentals.md         ← Domain 2 (24%) ✅ ENRICHED
+├── 03-foundation-model-applications.md      ← Domain 3 (28%) ✅ ENRICHED
+├── 04-guidelines-responsible-ai.md          ← Domain 4 (14%) ✅ ENRICHED
+├── 05-security-compliance-governance.md     ← Domain 5 (14%) ✅ ENRICHED
+├── 06-aws-services.md                       ← All in-scope AWS services ✅ ENRICHED
+├── 07-prompt-engineering.md                 ← Prompt engineering deep dive ✅ ENRICHED
+├── 08-practice-questions.md                 ← Sample Qs & exam tips ✅ ENRICHED
 └── 09-resources.md                          ← Links, courses, practice exams
 ```
 
 **Start with Domain 1**, work through each file in order, then review the services and practice questions.
+
+### 🎯 What's New: Comprehensive Study Material
+
+This guide has been **transformed from outlines into complete study material** with:
+
+✅ **Real-World Examples**: Every concept illustrated with practical scenarios  
+✅ **Step-by-Step Calculations**: Detailed walkthroughs of metrics, costs, and formulas  
+✅ **Visual Explanations**: Architecture diagrams and process flows  
+✅ **AWS Implementation Code**: Working examples for Bedrock, SageMaker, and more  
+✅ **Business Context**: ROI calculations and real-world decision frameworks  
+✅ **Exam-Focused Content**: Patterns, traps, and decision trees for exam success  
+
+### 📚 Content Highlights by Domain
+
+**Domain 1: AI/ML Fundamentals**
+- Supervised learning with diabetes prediction and delivery time examples
+- Unsupervised learning with customer segmentation (4 discovered segments)
+- Reinforcement learning with warehouse robot navigation (1000 episodes)
+- Deep learning architectures (CNNs, RNNs, Transformers) with visual explanations
+- Model evaluation metrics with confusion matrix calculations
+- Business metrics with $1.5M ROI example
+
+**Domain 2: Generative AI Fundamentals**
+- Tokenization with cost calculations (7 input + 23 output tokens example)
+- Transformer architecture with attention mechanism visualization
+- RAG implementation with company policy Q&A (5-step process)
+- AI agents with weather + flight booking example (4-step execution)
+- Multi-agent systems with customer support orchestration
+
+**Domain 3: Foundation Model Applications**
+- Temperature effects (0.0 vs 0.7 vs 1.0) with product description examples
+- Prompt caching savings: $23/month → $4.14/month (82% reduction)
+- Fine-tuning cost comparison: LoRA $200 vs Full $1,200
+- Model distillation: $150K/month → $2.5K/month (98% savings)
+- FM evaluation metrics (ROUGE, BERTScore) with calculations
+- RAG evaluation with 100-question test set
+
+**Domain 4: Responsible AI**
+- Bias detection with loan approval example (DI = 0.50, significant bias)
+- Bias metrics calculations (CI, DI, DPPL, AD, TE) with formulas
+- Bias mitigation: 15% → 0.5% hallucination rate (97% reduction)
+- Sustainability: GPT-3 training = 552 metric tons CO2
+- AWS Inferentia savings: $4,606/year → $1,997/year + 50% less CO2
+
+**Domain 5: Security, Compliance, Governance**
+- Prompt injection attacks with 4 attack types and mitigations
+- PII detection and redaction with AWS implementation
+- Hallucination detection with 3 real examples
+- Grounding techniques with legal document analysis (15% → 0.5% hallucination)
+- Multi-layer security approach with cost savings
+
+**AWS Services Guide**
+- Service comparison matrices (Bedrock vs SageMaker vs Q Business)
+- Decision trees for service selection
+- Real-world examples: Startup ($75/month) vs Enterprise ($150K/year)
+- Exam-focused patterns (cost-effective, quick setup, compliance)
+- Service integration patterns (RAG, agents, ML pipeline)
+
+**Prompt Engineering Guide**
+- Production patterns (defensive, structured output, error handling)
+- Cost optimization: $125/month → $12.50/month (90% reduction)
+- Prompt versioning: 65% → 85% satisfaction (+20%)
+- A/B testing methodology with metrics
+- Bedrock Prompt Management implementation
+
+**Practice Questions**
+- 40 comprehensive questions (20 original + 20 new)
+- All domains covered with detailed explanations
+- Real-world scenarios and cost calculations
+- Common exam traps identified
+- Explanation of why wrong answers are wrong
 
 ---
 
