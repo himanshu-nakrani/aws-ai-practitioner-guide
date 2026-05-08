@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Domain 1: AI and ML Fundamentals - AWS AI Practitioner Study Guide">
+<title>Domain 1: AI & ML Fundamentals | AWS AI Practitioner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="topnav" role="navigation" aria-label="Main navigation">
+<a href="index.html" class="logo" aria-label="Home">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+<span>AWS AI Practitioner</span>
+</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="domain1.html" class="active">AI/ML Fundamentals</a>
+<a href="domain2.html">Generative AI</a>
+<a href="domain3.html">Foundation Models</a>
+<a href="domain4.html">Responsible AI</a>
+<a href="domain5.html">Security & Governance</a>
+<a href="services.html">AWS Services</a>
+<a href="practice.html">Practice</a>
+</div>
+<button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+</button>
+</nav>
+
+<main class="main" id="main-content">
+<section class="hero">
+<div class="hero-badge">
+<span style="color: var(--orange)">●</span> Domain 1
+</div>
+<h1>AI & ML Fundamentals</h1>
+<p>Core concepts, machine learning types, agentic AI, and the ML pipeline</p>
+<div class="stats">
+<div class="stat">
+<div class="num">20%</div>
+<div class="label">Exam Weight</div>
+</div>
+<div class="stat">
+<div class="num">3</div>
+<div class="label">ML Types</div>
+</div>
+<div class="stat">
+<div class="num">5</div>
+<div class="label">Neural Nets</div>
+</div>
+<div class="stat">
+<div class="num">14</div>
+<div class="label">Key Topics</div>
+</div>
+</div>
+</section>
+
+<section id="ai-basics" aria-labelledby="ai-basics-heading">
+<div class="sec-head">
+<h2 id="ai-basics-heading">What is Artificial Intelligence?</h2>
+<span class="badge orange">Core</span>
+</div>
+<div class="card">
+<p>Artificial Intelligence (AI) is the broad field of creating machines that can perform tasks that typically require human intelligence.</p>
+<h3>Key Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Narrow AI (Weak AI)</strong></td>
+<td>Designed for a specific task (e.g., image recognition, language translation)</td>
+<td>✅ Current</td>
+</tr>
+<tr>
+<td><strong>General AI (Strong AI)</strong></td>
+<td>Human-level intelligence across all domains</td>
+<td>🔬 Research</td>
+</tr>
+<tr>
+<td><strong>Super AI</strong></td>
+<td>Surpasses human intelligence</td>
+<td>💭 Theoretical</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="agentic-ai" aria-labelledby="agentic-heading">
+<div class="sec-head">
+<h2 id="agentic-heading">Agentic AI</h2>
+<span class="badge orange">Important</span>
+</div>
+<div class="card">
+<p>Agentic AI refers to AI systems that can autonomously reason, plan, and take actions to accomplish goals with minimal human intervention.</p>
+<h3>Key Capabilities</h3>
+<div class="topics-grid">
+<div class="topic-card">
+<h4>🎯 Autonomous Decision-Making</h4>
+<p>Chooses actions without step-by-step human guidance</p>
+</div>
+<div class="topic-card">
+<h4>📋 Multi-Step Planning</h4>
+<p>Breaks down complex goals into subtasks</p>
+</div>
+<div class="topic-card">
+<h4>🔧 Tool Use</h4>
+<p>Calls APIs, queries databases, executes code</p>
+</div>
+<div class="topic-card">
+<h4>🧠 Memory</h4>
+<p>Maintains context across interactions</p>
+</div>
+<div class="topic-card">
+<h4>🔄 Self-Reflection</h4>
+<p>Evaluates its own outputs and adjusts</p>
+</div>
+</div>
+
+<h3>Traditional AI vs Agentic AI</h3>
+<table>
+<thead>
+<tr>
+<th>Traditional AI</th>
+<th>Agentic AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Responds to direct prompts/queries</td>
+<td>Proactively plans and executes multi-step workflows</td>
+</tr>
+<tr>
+<td>Single-turn interactions</td>
+<td>Multi-turn, goal-oriented interactions</td>
+</tr>
+<tr>
+<td>Limited context retention</td>
+<td>Maintains memory across sessions</td>
+</tr>
+</tbody>
+</table>
+
+<h3>AWS Agentic AI Services</h3>
+<ul>
+<li><strong>Amazon Bedrock Agents</strong>: Managed agent framework with action groups and knowledge bases</li>
+<li><strong>Amazon Bedrock AgentCore</strong>: Identity and policy management for agent interactions</li>
+<li><strong>Multi-Agent Systems</strong>: Multiple agents collaborating via communication patterns</li>
+</ul>
+</div>
+</section>
+
+<section id="ml-basics" aria-labelledby="ml-heading">
+<div class="sec-head">
+<h2 id="ml-heading">Machine Learning Fundamentals</h2>
+<span class="badge orange">Critical</span>
+</div>
+<div class="card">
+<p><strong>Machine Learning (ML)</strong> is a subset of AI where systems learn patterns from data without being explicitly programmed.</p>
+<p><strong>Core Idea:</strong> Give a system data, let it find patterns, then use those patterns to make predictions on new data.</p>
+
+<h3>The ML Pipeline</h3>
+<pre><code>Data Collection → Data Preparation → Feature Engineering → Model Selection → 
+Training → Evaluation → Tuning → Deployment → Monitoring</code></pre>
+
+<h3>Types of Inferencing</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Batch</strong></td>
+<td>Process large datasets offline</td>
+<td>Nightly fraud analysis, bulk document processing</td>
+</tr>
+<tr>
+<td><strong>Real-Time</strong></td>
+<td>Synchronous, immediate response</td>
+<td>Chatbots, live recommendations</td>
+</tr>
+<tr>
+<td><strong>Asynchronous</strong></td>
+<td>Submit job, poll for results later</td>
+<td>Long-running video analysis</td>
+</tr>
+<tr>
+<td><strong>Serverless</strong></td>
+<td>Auto-scaling, pay-per-use inference</td>
+<td>Variable workloads, cost-sensitive apps</td>
+</tr>
+</tbody>
+</table>
+
+<h3>When AI/ML is NOT Appropriate</h3>
+<ul>
+<li>When a specific deterministic outcome is needed (not a prediction)</li>
+<li>When cost-benefit analysis doesn't justify it</li>
+<li>When insufficient quality data exists</li>
+<li>When explainability is critical and model is opaque</li>
+<li>When operational constraints (latency, compute) make it impractical</li>
+<li>When regulatory/compliance requirements prohibit AI use</li>
+</ul>
+</div>
+</section>
+
+<section id="ml-types" aria-labelledby="types-heading">
+<div class="sec-head">
+<h2 id="types-heading">Types of Machine Learning</h2>
+<span class="badge orange">Must Know</span>
+</div>
+
+<div class="collapsible open">
+<div class="collapsible-header">
+<h3>🎓 Supervised Learning</h3>
+<span class="collapsible-icon">▼</span>
+</div>
+<div class="collapsible-content">
+<div class="collapsible-body">
+<p><strong>Definition:</strong> Model learns from labeled data (input-output pairs)</p>
+<p><strong>Goal:</strong> Predict the output for new inputs</p>
+
+<h4>Common Algorithms</h4>
+<ul>
+<li>Linear Regression (predicting continuous values)</li>
+<li>Logistic Regression (binary classification)</li>
+<li>Decision Trees / Random Forests</li>
+<li>Support Vector Machines (SVM)</li>
+<li>Neural Networks</li>
+<li>k-Nearest Neighbors (kNN)</li>
+</ul>
+
+<h4>Two Main Tasks</h4>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Output</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Classification</strong></td>
+<td>Discrete categories</td>
+<td>Email → spam/ham</td>
+</tr>
+<tr>
+<td><strong>Regression</strong></td>
+<td>Continuous value</td>
+<td>House features → $350,000</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Examples</h4>
+<ul>
+<li>Spam detection (email → spam/not spam)</li>
+<li>House price prediction (features → price)</li>
+<li>Image classification (image → label)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header">
+<h3>🔍 Unsupervised Learning</h3>
+<span class="collapsible-icon">▼</span>
+</div>
+<div class="collapsible-content">
+<div class="collapsible-body">
+<p><strong>Definition:</strong> Model finds patterns in unlabeled data</p>
+<p><strong>Goal:</strong> Discover hidden structure or groupings</p>
+
+<h4>Common Algorithms</h4>
+<ul>
+<li>K-Means Clustering</li>
+<li>Hierarchical Clustering</li>
+<li>DBSCAN</li>
+<li>Principal Component Analysis (PCA)</li>
+<li>Autoencoders</li>
+</ul>
+
+<h4>Key Use Cases</h4>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clustering</strong></td>
+<td>Group similar items</td>
+<td>Customer segments</td>
+</tr>
+<tr>
+<td><strong>Dimensionality Reduction</strong></td>
+<td>Reduce features</td>
+<td>Data visualization</td>
+</tr>
+<tr>
+<td><strong>Association</strong></td>
+<td>Find rules/relationships</td>
+<td>Market basket analysis</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Examples</h4>
+<ul>
+<li>Customer segmentation</li>
+<li>Anomaly detection</li>
+<li>Topic modeling</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header">
+<h3>🎮 Reinforcement Learning</h3>
+<span class="collapsible-icon">▼</span>
+</div>
+<div class="collapsible-content">
+<div class="collapsible-body">
+<p><strong>Definition:</strong> Agent learns by interacting with an environment, receiving rewards/penalties</p>
+<p><strong>Goal:</strong> Maximize cumulative reward</p>
+
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Agent:</strong> The learner/decision maker</li>
+<li><strong>Environment:</strong> What the agent interacts with</li>
+<li><strong>State:</strong> Current situation</li>
+<li><strong>Action:</strong> What the agent does</li>
+<li><strong>Reward:</strong> Feedback signal</li>
+<li><strong>Policy:</strong> Strategy for choosing actions</li>
+</ul>
+
+<h4>Common Algorithms</h4>
+<ul>
+<li>Q-Learning</li>
+<li>Deep Q-Networks (DQN)</li>
+<li>Policy Gradient Methods</li>
+<li>Actor-Critic Methods</li>
+</ul>
+
+<h4>Examples</h4>
+<ul>
+<li>Game playing (chess, Go)</li>
+<li>Robot navigation</li>
+<li>Autonomous driving</li>
+<li>Resource optimization</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="deep-learning" aria-labelledby="dl-heading">
+<div class="sec-head">
+<h2 id="dl-heading">Deep Learning</h2>
+<span class="badge orange">Important</span>
+</div>
+<div class="card">
+<p>Deep Learning is a subset of ML using neural networks with multiple layers (deep neural networks).</p>
+
+<h3>Neural Network Basics</h3>
+<pre><code>Input Layer → Hidden Layers → Output Layer
+   (features)   (learn patterns)   (prediction)</code></pre>
+
+<h4>Key Components</h4>
+<ul>
+<li><strong>Neurons:</strong> Basic processing units</li>
+<li><strong>Weights:</strong> Learned parameters</li>
+<li><strong>Activation Functions:</strong> Introduce non-linearity (ReLU, Sigmoid, Tanh)</li>
+<li><strong>Layers:</strong> Input, hidden, output</li>
+</ul>
+
+<h3>Types of Neural Networks</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Use Case</th>
+<th>AWS Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CNN</strong> (Convolutional)</td>
+<td>Image recognition, video analysis</td>
+<td>Amazon Rekognition</td>
+</tr>
+<tr>
+<td><strong>RNN</strong> (Recurrent)</td>
+<td>Sequential data, time series</td>
+<td>Amazon Forecast</td>
+</tr>
+<tr>
+<td><strong>Transformer</strong></td>
+<td>NLP, language models</td>
+<td>Amazon Bedrock</td>
+</tr>
+<tr>
+<td><strong>GAN</strong> (Generative Adversarial)</td>
+<td>Image generation, data augmentation</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Autoencoder</strong></td>
+<td>Anomaly detection, denoising</td>
+<td>Amazon Lookout for Metrics</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="terminology" aria-labelledby="terms-heading">
+<div class="sec-head">
+<h2 id="terms-heading">Key ML Terminology</h2>
+</div>
+<div class="card">
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training</strong></td>
+<td>Teaching the model using data</td>
+</tr>
+<tr>
+<td><strong>Inference</strong></td>
+<td>Making predictions with a trained model</td>
+</tr>
+<tr>
+<td><strong>Epoch</strong></td>
+<td>One complete pass through training data</td>
+</tr>
+<tr>
+<td><strong>Batch Size</strong></td>
+<td>Number of samples processed before updating weights</td>
+</tr>
+<tr>
+<td><strong>Learning Rate</strong></td>
+<td>Step size for weight updates</td>
+</tr>
+<tr>
+<td><strong>Overfitting</strong></td>
+<td>Model memorizes training data, fails on new data</td>
+</tr>
+<tr>
+<td><strong>Underfitting</strong></td>
+<td>Model is too simple to capture patterns</td>
+</tr>
+<tr>
+<td><strong>Bias</strong></td>
+<td>Error from overly simplistic assumptions</td>
+</tr>
+<tr>
+<td><strong>Variance</strong></td>
+<td>Error from sensitivity to training data fluctuations</td>
+</tr>
+<tr>
+<td><strong>Feature</strong></td>
+<td>An input variable used for prediction</td>
+</tr>
+<tr>
+<td><strong>Label</strong></td>
+<td>The output variable to predict</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="metrics" aria-labelledby="metrics-heading">
+<div class="sec-head">
+<h2 id="metrics-heading">Model Evaluation Metrics</h2>
+<span class="badge orange">Critical</span>
+</div>
+
+<div class="card">
+<h3>Classification Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>Correct predictions / total predictions</td>
+</tr>
+<tr>
+<td><strong>Precision</strong></td>
+<td>True positives / (true positives + false positives)</td>
+</tr>
+<tr>
+<td><strong>Recall</strong></td>
+<td>True positives / (true positives + false negatives)</td>
+</tr>
+<tr>
+<td><strong>F1 Score</strong></td>
+<td>Harmonic mean of precision and recall</td>
+</tr>
+<tr>
+<td><strong>AUC-ROC</strong></td>
+<td>Model's ability to distinguish classes</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Regression Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MAE</strong></td>
+<td>Mean Absolute Error — average of absolute differences</td>
+</tr>
+<tr>
+<td><strong>MSE</strong></td>
+<td>Mean Squared Error — average of squared differences</td>
+</tr>
+<tr>
+<td><strong>RMSE</strong></td>
+<td>Root Mean Squared Error — square root of MSE</td>
+</tr>
+<tr>
+<td><strong>R²</strong></td>
+<td>Proportion of variance explained by model</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Business Metrics for AI/ML</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ROI</strong></td>
+<td>Return on investment — value generated vs total cost</td>
+</tr>
+<tr>
+<td><strong>Cost per User</strong></td>
+<td>Infrastructure + inference cost per end user</td>
+</tr>
+<tr>
+<td><strong>Development Costs</strong></td>
+<td>Data labeling, model training, engineering time</td>
+</tr>
+<tr>
+<td><strong>Customer Feedback</strong></td>
+<td>User satisfaction, NPS scores, adoption rates</td>
+</tr>
+<tr>
+<td><strong>Conversion Rate</strong></td>
+<td>Users who take desired action after AI interaction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="data" aria-labelledby="data-heading">
+<div class="sec-head">
+<h2 id="data-heading">Data for ML</h2>
+</div>
+<div class="card">
+<h3>Data Types</h3>
+<ul>
+<li><strong>Structured:</strong> Tables, databases (CSV, SQL)</li>
+<li><strong>Unstructured:</strong> Text, images, audio, video</li>
+<li><strong>Semi-structured:</strong> JSON, XML, logs</li>
+</ul>
+
+<h3>Data Splitting</h3>
+<pre><code>Total Dataset
+├── Training Set (70-80%) — Learn patterns
+├── Validation Set (10-15%) — Tune hyperparameters
+└── Test Set (10-15%) — Final evaluation</code></pre>
+
+<h3>AWS Data Services</h3>
+<ul>
+<li><strong>Amazon S3:</strong> Data lake storage</li>
+<li><strong>AWS Glue:</strong> ETL and data preparation</li>
+<li><strong>Amazon SageMaker Data Wrangler:</strong> Visual data preparation</li>
+<li><strong>Amazon SageMaker Ground Truth:</strong> Data labeling</li>
+<li><strong>AWS Lake Formation:</strong> Managed data lake</li>
+</ul>
+</div>
+</section>
+
+<section id="mlops" aria-labelledby="mlops-heading">
+<div class="sec-head">
+<h2 id="mlops-heading">MLOps Concepts</h2>
+<span class="badge orange">Important</span>
+</div>
+<div class="card">
+<p>MLOps (Machine Learning Operations) applies DevOps principles to ML systems — managing the full lifecycle of ML models in production reliably and efficiently.</p>
+
+<h3>MLOps Lifecycle</h3>
+<pre><code>Data Management → Experiment Tracking → Model Training → 
+Model Evaluation → Model Registry → Deployment → Monitoring → Retraining</code></pre>
+
+<h3>AWS MLOps Services</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Role in MLOps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SageMaker Pipelines</strong></td>
+<td>Orchestrate ML workflows end-to-end</td>
+</tr>
+<tr>
+<td><strong>SageMaker Experiments</strong></td>
+<td>Track training runs and compare models</td>
+</tr>
+<tr>
+<td><strong>SageMaker Model Registry</strong></td>
+<td>Version control and governance</td>
+</tr>
+<tr>
+<td><strong>SageMaker Model Monitor</strong></td>
+<td>Detect data drift, model drift, bias</td>
+</tr>
+<tr>
+<td><strong>SageMaker Feature Store</strong></td>
+<td>Centralized, reusable feature management</td>
+</tr>
+<tr>
+<td><strong>AWS CodePipeline</strong></td>
+<td>CI/CD integration for ML deployments</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td>Metrics, logs, alarms for monitoring</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Model Retraining Triggers</h3>
+<ul>
+<li><strong>Scheduled:</strong> Regular intervals (weekly, monthly)</li>
+<li><strong>Performance-Based:</strong> When accuracy drops below threshold</li>
+<li><strong>Data Drift-Based:</strong> When input data distribution changes significantly</li>
+<li><strong>Event-Driven:</strong> New data becomes available or business requirements change</li>
+</ul>
+</div>
+</section>
+
+<section id="checklist" aria-labelledby="checklist-heading">
+<div class="sec-head">
+<h2 id="checklist-heading">Domain 1 Checklist</h2>
+<span class="badge green">Track Progress</span>
+</div>
+<div class="card">
+<ul style="list-style: none; padding-left: 0;">
+<li><label><input type="checkbox" data-topic="d1-ai-ml-dl"> Can explain AI vs ML vs Deep Learning vs Agentic AI</label></li>
+<li><label><input type="checkbox" data-topic="d1-ml-types"> Know the three types of ML and when to use each</label></li>
+<li><label><input type="checkbox" data-topic="d1-supervised"> Can describe supervised learning algorithms</label></li>
+<li><label><input type="checkbox" data-topic="d1-unsupervised"> Can describe unsupervised learning techniques</label></li>
+<li><label><input type="checkbox" data-topic="d1-reinforcement"> Understand reinforcement learning concepts</label></li>
+<li><label><input type="checkbox" data-topic="d1-neural-nets"> Know common neural network types and uses</label></li>
+<li><label><input type="checkbox" data-topic="d1-terminology"> Can define key ML terms (epoch, overfitting, bias, etc.)</label></li>
+<li><label><input type="checkbox" data-topic="d1-metrics"> Understand evaluation metrics for classification and regression</label></li>
+<li><label><input type="checkbox" data-topic="d1-business"> Know business metrics (ROI, cost per user, customer feedback)</label></li>
+<li><label><input type="checkbox" data-topic="d1-inference"> Understand types of inferencing (batch, real-time, async, serverless)</label></li>
+<li><label><input type="checkbox" data-topic="d1-when-not"> Know when AI/ML is NOT the right solution</label></li>
+<li><label><input type="checkbox" data-topic="d1-data"> Know data preparation concepts and splitting</label></li>
+<li><label><input type="checkbox" data-topic="d1-use-cases"> Can map use cases to ML types</label></li>
+<li><label><input type="checkbox" data-topic="d1-mlops"> Understand MLOps concepts (experiments, pipelines, monitoring, retraining)</label></li>
+</ul>
+</div>
+</section>
+
+<nav aria-label="Domain navigation" style="margin-top: 3rem;">
+<div style="display: flex; justify-content: space-between; gap: 1rem;">
+<a href="index.html" class="btn-primary" style="background: var(--surface); color: var(--text);">← Back to Home</a>
+<a href="domain2.html" class="btn-primary">Next: Generative AI →</a>
+</div>
+</nav>
+</main>
+
+<footer class="footer">
+<p>AWS Certified AI Practitioner Study Guide • Domain 1 of 5</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
