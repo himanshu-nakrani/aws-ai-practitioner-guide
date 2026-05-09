@@ -20,6 +20,7 @@ function initMobileMenu() {
     menuBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close menu when clicking outside
@@ -27,6 +28,7 @@ function initMobileMenu() {
       if (!menuBtn.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       }
     });
 
@@ -35,8 +37,18 @@ function initMobileMenu() {
       if (e.key === 'Escape' && navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
         menuBtn.focus();
       }
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
     });
   }
 }

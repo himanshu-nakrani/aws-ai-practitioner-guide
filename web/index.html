@@ -13,7 +13,7 @@
   <div class="grain-overlay"></div>
   
   <!-- Header -->
-  <header class="site-header">
+   <header class="site-header">
     <div class="header-inner">
       <div class="logo-group">
         <span class="aws-badge">AWS</span>
@@ -27,11 +27,24 @@
         <span class="divider">•</span>
         <span class="questions">65 Questions</span>
       </div>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path class="hamburger-line" d="M3 5h14M3 10h14M3 15h14"/>
+        </svg>
+      </button>
     </div>
+    <nav class="mobile-nav-panel" aria-label="Mobile navigation">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#domain-1" class="mobile-nav-link">D1: AI &amp; ML Fundamentals</a>
+      <a href="#domain-2" class="mobile-nav-link">D2: GenAI Fundamentals</a>
+      <a href="#domain-3" class="mobile-nav-link">D3: Foundation Models</a>
+      <a href="#domain-4" class="mobile-nav-link">D4: Responsible AI</a>
+      <a href="#domain-5" class="mobile-nav-link">D5: Security &amp; Governance</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-bg">
       <div class="hero-grid"></div>
       <div class="hero-glow glow-1"></div>

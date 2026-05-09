@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initWeightBars();
   initTimelineHover();
+  initMobileNav();
 });
 
 /* ---------- Entrance Animations ---------- */
@@ -188,6 +189,63 @@ function initTimelineHover() {
   });
 }
 
+/* ---------- Mobile Navigation ---------- */
+function initMobileNav() {
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  const navPanel = document.querySelector('.mobile-nav-panel');
+
+  if (!toggleBtn || !navPanel) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = navPanel.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (navPanel.classList.contains('open') &&
+        !toggleBtn.contains(e.target) &&
+        !navPanel.contains(e.target)) {
+      navPanel.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navPanel.classList.contains('open')) {
+      navPanel.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      toggleBtn.focus();
+    }
+  });
+
+  navPanel.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        e.preventDefault();
+        navPanel.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        const headerOffset = 80;
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
 /* ---------- Add CSS for animated elements ---------- */
 const style = document.createElement('style');
 style.textContent = `
@@ -223,7 +281,7 @@ function showToast(message, type = 'success') {
   toast.textContent = message;
   toast.style.cssText = `
     position: fixed;
-    bottom: 24px;
+    bottom: calc(24px + ${getComputedStyle(document.documentElement).getPropertyValue('--safe-area-bottom') || '0px'});
     left: 50%;
     transform: translateX(-50%) translateY(100px);
     background: ${type === 'success' ? '#10b981' : '#ef4444'};
