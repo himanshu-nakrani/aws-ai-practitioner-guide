@@ -1,162 +1,134 @@
-# AWS Certified AI Practitioner (AIF-C01)
-## Complete Study Guide
+# Everything you need to know to become AWS AI Practitioner
 
-Welcome to your comprehensive study guide for the AWS Certified AI Practitioner certification. This guide covers everything you need to know to pass the exam.
+<p align="center">
+  <a href="https://aws.amazon.com/certification/certified-ai-practitioner/">
+    <img src="https://img.shields.io/badge/AWS-Certified%20AI%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS AI Practitioner Badge">
+  </a>
+  <img src="https://img.shields.io/badge/Exam-AIF--C01-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AIF-C01">
+  <img src="https://img.shields.io/badge/Level-Foundational-1P73D4?style=for-the-badge" alt="Foundational Level">
+</p>
 
----
+This repo is a study guide for the **[AWS Certified AI Practitioner (AIF-C01)](https://aws.amazon.com/certification/certified-ai-practitioner/)** exam. It also covers how common AI and generative AI ideas show up on AWS in real projects.
 
-## Exam Overview
-
-| Detail | Info |
-|--------|------|
-| **Exam Code** | AIF-C01 |
-| **Level** | Foundational |
-| **Format** | Multiple-choice, Multiple-response, Ordering, Matching |
-| **Questions** | 65 total (50 scored + 15 unscored) |
-| **Duration** | 90 minutes |
-| **Cost** | $100 USD |
-| **Passing Score** | 700/1000 |
-| **Validity** | 3 years |
-| **Languages** | English, Japanese, Korean, Simplified Chinese, Traditional Chinese, German, Italian, French (France), Spanish (Latin America), Spanish (Spain), Portuguese (Brazil), Arabic |
-| **Prerequisite** | None (up to 6 months AWS AI/ML exposure recommended) |
+The material follows the **official exam guide** ([PDF](https://docs.aws.amazon.com/pdfs/aws-certification/latest/ai-practitioner-01/ai-practitioner-01.pdf), [HTML hub](https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01.html)). For exam scope, service names, and domain weights, rely on AWS docs and the guide; both can change.
 
 ---
 
-## Exam Domains & Weights
+## 🎨 Interactive Study Guide
 
-| # | Domain | Weight |
-|---|--------|--------|
-| 1 | Fundamentals of AI and ML | 20% |
-| 2 | Fundamentals of Generative AI | 24% |
-| 3 | Applications of Foundation Models | 28% |
-| 4 | Guidelines for Responsible AI | 14% |
-| 5 | Security, Compliance, and Governance for AI Solutions | 14% |
+A beautifully designed, interactive web interface is now available at [`web/index.html`](web/index.html) — featuring:
 
----
+- **Visual domain breakdown** with animated weight bars
+- **7-phase study timeline** with estimated time allocations
+- **Interactive concept cards** covering all 5 exam domains
+- **Visual diagrams** for RAG, FM lifecycle, ML lifecycle, and shared responsibility
+- **AWS service reference tables** with exam-oriented one-liners
+- **Self-check quizzes** at the end of each domain
+- **Code examples browser** for hands-on practice
 
-## Recommended Study Plan
-
-### Path 1: Self-Paced (Free, 30-40 hours)
-
-1. **AWS AI Practitioner Essentials** (Skill Builder) — 6 hours
-2. **Exam Readiness** course (Skill Builder) — 2 hours
-3. **Official Exam Guide** review — 2 hours
-4. **Domain study** (this guide) — 12 hours
-5. **AWS Workshops** (Bedrock, SageMaker) — 8 hours
-6. **Practice Exams** — 6 hours
-7. **Weak domain revision** — 4 hours
-
-### Path 2: Accelerated (Paid, 20 hours)
-
-1. Udemy/Coursera course (Stephane Maarek or similar) — 15 hours
-2. Official Practice Exam — 2 hours
-3. Domain review with this guide — 3 hours
+Open `web/index.html` in any modern browser to start studying.
 
 ---
 
-## How to Use This Guide
+## Who this is for
 
-```
-aws-ai-practitioner-guide/
-├── README.md                                ← You are here
-├── 01-ai-ml-fundamentals.md                 ← Domain 1 (20%) ✅ ENRICHED
-├── 02-generative-ai-fundamentals.md         ← Domain 2 (24%) ✅ ENRICHED
-├── 03-foundation-model-applications.md      ← Domain 3 (28%) ✅ ENRICHED
-├── 04-guidelines-responsible-ai.md          ← Domain 4 (14%) ✅ ENRICHED
-├── 05-security-compliance-governance.md     ← Domain 5 (14%) ✅ ENRICHED
-├── 06-aws-services.md                       ← All in-scope AWS services ✅ ENRICHED
-├── 07-prompt-engineering.md                 ← Prompt engineering deep dive ✅ ENRICHED
-├── 08-practice-questions.md                 ← Sample Qs & exam tips ✅ ENRICHED
-└── 09-resources.md                          ← Links, courses, practice exams
-```
+- Professionals who need **foundational AI/ML and generative AI literacy** on AWS.
+- Candidates preparing for **AIF-C01** who want domain-by-domain coverage plus hands-on examples.
+- Anyone mapping **business problems** to the right AWS AI building blocks (without assuming you will train models from scratch).
 
-**Start with Domain 1**, work through each file in order, then review the services and practice questions.
-
-### 🎯 What's New: Comprehensive Study Material
-
-This guide has been **transformed from outlines into complete study material** with:
-
-✅ **Real-World Examples**: Every concept illustrated with practical scenarios  
-✅ **Step-by-Step Calculations**: Detailed walkthroughs of metrics, costs, and formulas  
-✅ **Visual Explanations**: Architecture diagrams and process flows  
-✅ **AWS Implementation Code**: Working examples for Bedrock, SageMaker, and more  
-✅ **Business Context**: ROI calculations and real-world decision frameworks  
-✅ **Exam-Focused Content**: Patterns, traps, and decision trees for exam success  
-
-### 📚 Content Highlights by Domain
-
-**Domain 1: AI/ML Fundamentals**
-- Supervised learning with diabetes prediction and delivery time examples
-- Unsupervised learning with customer segmentation (4 discovered segments)
-- Reinforcement learning with warehouse robot navigation (1000 episodes)
-- Deep learning architectures (CNNs, RNNs, Transformers) with visual explanations
-- Model evaluation metrics with confusion matrix calculations
-- Business metrics with $1.5M ROI example
-
-**Domain 2: Generative AI Fundamentals**
-- Tokenization with cost calculations (7 input + 23 output tokens example)
-- Transformer architecture with attention mechanism visualization
-- RAG implementation with company policy Q&A (5-step process)
-- AI agents with weather + flight booking example (4-step execution)
-- Multi-agent systems with customer support orchestration
-
-**Domain 3: Foundation Model Applications**
-- Temperature effects (0.0 vs 0.7 vs 1.0) with product description examples
-- Prompt caching savings: $23/month → $4.14/month (82% reduction)
-- Fine-tuning cost comparison: LoRA $200 vs Full $1,200
-- Model distillation: $150K/month → $2.5K/month (98% savings)
-- FM evaluation metrics (ROUGE, BERTScore) with calculations
-- RAG evaluation with 100-question test set
-
-**Domain 4: Responsible AI**
-- Bias detection with loan approval example (DI = 0.50, significant bias)
-- Bias metrics calculations (CI, DI, DPPL, AD, TE) with formulas
-- Bias mitigation: 15% → 0.5% hallucination rate (97% reduction)
-- Sustainability: GPT-3 training = 552 metric tons CO2
-- AWS Inferentia savings: $4,606/year → $1,997/year + 50% less CO2
-
-**Domain 5: Security, Compliance, Governance**
-- Prompt injection attacks with 4 attack types and mitigations
-- PII detection and redaction with AWS implementation
-- Hallucination detection with 3 real examples
-- Grounding techniques with legal document analysis (15% → 0.5% hallucination)
-- Multi-layer security approach with cost savings
-
-**AWS Services Guide**
-- Service comparison matrices (Bedrock vs SageMaker vs Q Business)
-- Decision trees for service selection
-- Real-world examples: Startup ($75/month) vs Enterprise ($150K/year)
-- Exam-focused patterns (cost-effective, quick setup, compliance)
-- Service integration patterns (RAG, agents, ML pipeline)
-
-**Prompt Engineering Guide**
-- Production patterns (defensive, structured output, error handling)
-- Cost optimization: $125/month → $12.50/month (90% reduction)
-- Prompt versioning: 65% → 85% satisfaction (+20%)
-- A/B testing methodology with metrics
-- Bedrock Prompt Management implementation
-
-**Practice Questions**
-- 40 comprehensive questions (20 original + 20 new)
-- All domains covered with detailed explanations
-- Real-world scenarios and cost calculations
-- Common exam traps identified
-- Explanation of why wrong answers are wrong
+The exam's **target candidate** uses AI/ML on AWS but is **not** expected to implement deep model engineering, heavy MLOps pipelines, or organization-wide governance frameworks. On the exam those topics show up as _concepts_ to recognize, not as tasks to perform.
 
 ---
 
-## Quick Reference: What to Know Cold
+## Exam snapshot (official basics)
 
-- Machine Learning types (supervised, unsupervised, reinforcement)
-- Foundation Models vs traditional ML
-- Amazon Bedrock and Amazon SageMaker AI (stars of the exam)
-- Prompt engineering techniques (zero-shot, few-shot, chain-of-thought)
-- RAG vs fine-tuning vs prompt engineering vs model distillation
-- Inference parameters (temperature, input/output length)
-- FM evaluation metrics (ROUGE, BLEU, BERTScore, LLM-as-a-judge)
-- Responsible AI principles (fairness, transparency, veracity, robustness)
-- AWS shared responsibility model for AI
-- Security: prompt injection, hallucination detection, data leakage prevention
-- Governance: data lineage, source citation, compliance frameworks
-- Cost models (on-demand vs provisioned throughput, token-based pricing)
-- Agentic AI concepts (agents, multi-agent systems, MCP)
+| Item                 | Detail                                                            |
+| -------------------- | ----------------------------------------------------------------- |
+| **Exam code**        | AIF-C01                                                           |
+| **Level**            | Foundational (AWS Certification)                                  |
+| **Question types**   | Multiple choice, multiple response, ordering, matching            |
+| **Scored questions** | 50 (plus **15 unscored** questions that do not affect your score) |
+| **Passing score**    | **700** on a scaled score of 100–1000                             |
+| **Scoring model**    | Compensatory (overall pass; section weights differ)                |
+
+**Recommended knowledge (from AWS):** familiarity with core AWS services (for example EC2, S3, Lambda, **Amazon Bedrock**, **Amazon SageMaker AI**), the **shared responsibility model**, **IAM**, and **pricing models**. Up to about **six months**' exposure to AI/ML on AWS is typical for the target candidate.
+
+**Out-of-scope job tasks (examples from AWS):** developing model algorithms, heavy feature engineering, hyperparameter tuning, building full AI/ML pipelines or security/compliance programs. On the exam you need to recognize _what_ these are, not perform them at expert depth.
+
+---
+
+## Content domains and weights (scored content)
+
+| Domain | Topic                                                 | Weight  |
+| ------ | ----------------------------------------------------- | ------- |
+| **1**  | Fundamentals of AI and ML                             | **20%** |
+| **2**  | Fundamentals of GenAI                                 | **24%** |
+| **3**  | Applications of Foundation Models                     | **28%** |
+| **4**  | Guidelines for Responsible AI                         | **14%** |
+| **5**  | Security, Compliance, and Governance for AI Solutions | **14%** |
+
+---
+
+## How to use this repo
+
+### Web Interface (Recommended)
+Open [`web/index.html`](web/index.html) in your browser for an interactive study experience with visual aids and animations.
+
+### Markdown Guides
+1. **Read the domain guides in order** (1 through 5). Later domains assume you know these terms.
+2. **Cross-link to AWS docs** for anything operational (IAM, encryption, regional availability, pricing).
+3. **Run the code examples** under `examples/` to connect API shapes to the concepts (Bedrock, boto3 patterns, evaluation and monitoring ideas).
+4. **Validate exam scope** using the official [in-scope services](https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/aif-01-in-scope-services.html) list.
+
+### Suggested study sequence
+
+| Phase | Focus                  | Activities                                                                                  |
+| ----- | ---------------------- | ------------------------------------------------------------------------------------------- |
+| **1** | Vocabulary & lifecycle | Domain 1 guide; sketch one ML lifecycle for a business problem you know.                    |
+| **2** | GenAI building blocks  | Domain 2 guide; list 3 GenAI use cases and 2 failure modes (hallucination, cost).           |
+| **3** | FMs in production      | Domain 3 guide; practice explaining RAG, agents, and evaluation metrics out loud.           |
+| **4** | Responsibility & trust | Domain 4 guide; map tools (Guardrails, Clarify, Model Monitor, A2I) to risks.               |
+| **5** | Security & governance  | Domain 5 guide; trace IAM → encryption → logging for a Bedrock workload on paper.           |
+| **6** | Service mapping        | `guides/06-aws-services-primer.md`; drill "which service for which scenario?"               |
+| **7** | Hands-on               | Run Bedrock examples in a sandbox account; adjust inference parameters and observe changes. |
+
+---
+
+## Guide index
+
+| Guide                                       | File                                                                                             |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Domain 1: AI & ML fundamentals              | [guides/01-fundamentals-ai-and-ml.md](guides/01-fundamentals-ai-and-ml.md)                       |
+| Domain 2: Generative AI fundamentals        | [guides/02-fundamentals-of-genai.md](guides/02-fundamentals-of-genai.md)                         |
+| Domain 3: Foundation models in applications | [guides/03-applications-of-foundation-models.md](guides/03-applications-of-foundation-models.md) |
+| Domain 4: Responsible AI                    | [guides/04-responsible-ai.md](guides/04-responsible-ai.md)                                       |
+| Domain 5: Security, compliance, governance  | [guides/05-security-compliance-governance.md](guides/05-security-compliance-governance.md)       |
+| AWS services at a glance (exam-oriented)     | [guides/06-aws-services-primer.md](guides/06-aws-services-primer.md)                             |
+
+---
+
+## Code examples
+
+| Example                                                                  | Description                                                                           |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [examples/bedrock_converse.py](examples/bedrock_converse.py)             | Invoke a foundation model with the **Converse** API (messages, inference parameters). |
+| [examples/bedrock_embeddings.py](examples/bedrock_embeddings.py)         | Generate **embeddings** for RAG-style workflows.                                      |
+| [examples/rag_similarity_concept.py](examples/rag_similarity_concept.py) | **Cosine similarity** between vectors (RAG retrieval concept).                        |
+| [examples/requirements.txt](examples/requirements.txt)                   | Minimal Python dependencies for the samples.                                          |
+
+Examples assume credentials via the default AWS credential chain (for example environment variables, `~/.aws/credentials`, or an IAM role). Replace model IDs and regions with values valid for your account.
+
+---
+
+## Official resources
+
+- [AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/) (certification home)
+- [Exam guide (AIF-C01)](https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01.html) (domains, tasks, policies)
+- [Exam Prep on AWS Skill Builder](https://skillbuilder.aws/) (training aligned with AWS Certification)
+- [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/) (operational excellence, security, cost, sustainability)
+
+---
+
+## Disclaimer
+
+This guide is **educational** and not affiliated with AWS. Exams, service names, and guides change; check AWS documentation before you schedule your test or design production systems.

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS AI Practitioner Study Guide | AIF-C01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="grain-overlay"></div>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <span class="aws-badge">AWS</span>
+        <span class="cert-badge">Certified</span>
+        <h1 class="site-title">AI Practitioner</h1>
+      </div>
+      <div class="header-meta">
+        <span class="exam-code">AIF-C01</span>
+        <span class="divider">•</span>
+        <span class="level">Foundational</span>
+        <span class="divider">•</span>
+        <span class="questions">65 Questions</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge-row">
+        <span class="domain-ribbon">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6 0L7.5 4.5L12 6L7.5 7.5L6 12L4.5 7.5L0 6L4.5 4.5L6 0Z" fill="currentColor"/>
+          </svg>
+          Domain 3: 28% Weight
+        </span>
+        <span class="pass-threshold">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          Pass Score: 700
+        </span>
+      </div>
+      <h2 class="hero-title">Everything you need to<br><span class="gradient-text">become AWS AI Practitioner</span></h2>
+      <p class="hero-subtitle">A structured study guide covering AI/ML fundamentals, generative AI, foundation models, responsible AI, and security — aligned to the AIF-C01 exam.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Domains</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Study Guides</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Code Examples</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Scored Questions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain Weights Visualization -->
+  <section class="domain-section">
+    <div class="section-header">
+      <span class="section-tag">EXAM SCOPE</span>
+      <h3 class="section-title">Content Domains & Weights</h3>
+      <p class="section-desc">Official domain breakdown from AWS Certification</p>
+    </div>
+    <div class="domain-grid">
+      <div class="domain-card" data-domain="1" data-weight="20">
+        <div class="domain-number">01</div>
+        <div class="domain-content">
+          <h4 class="domain-title">Fundamentals of AI & ML</h4>
+          <p class="domain-desc">Vocabulary, ML lifecycle, data types, learning paradigms, and AWS managed AI services.</p>
+          <div class="domain-meta">
+            <span class="weight-badge">20%</span>
+            <a href="#domain-1" class="domain-link">Study Guide →</a>
+          </div>
+        </div>
+        <div class="weight-bar" style="--weight: 20">
+          <div class="weight-fill"></div>
+        </div>
+      </div>
+      <div class="domain-card" data-domain="2" data-weight="24">
+        <div class="domain-number">02</div>
+        <div class="domain-content">
+          <h4 class="domain-title">Fundamentals of GenAI</h4>
+          <p class="domain-desc">Tokens, embeddings, transformers, foundation models, AWS GenAI services, and cost tradeoffs.</p>
+          <div class="domain-meta">
+            <span class="weight-badge">24%</span>
+            <a href="#domain-2" class="domain-link">Study Guide →</a>
+          </div>
+        </div>
+        <div class="weight-bar" style="--weight: 24">
+          <div class="weight-fill"></div>
+        </div>
+      </div>
+      <div class="domain-card featured" data-domain="3" data-weight="28">
+        <div class="domain-number">03</div>
+        <div class="domain-content">
+          <h4 class="domain-title">Applications of Foundation Models</h4>
+          <p class="domain-desc">FM design, prompt engineering, RAG, agents, fine-tuning, and evaluation. Highest weight on exam.</p>
+          <div class="domain-meta">
+            <span class="weight-badge highlight">28%</span>
+            <a href="#domain-3" class="domain-link">Study Guide →</a>
+          </div>
+        </div>
+        <div class="weight-bar" style="--weight: 28">
+          <div class="weight-fill"></div>
+        </div>
+        <div class="featured-badge">HIGHEST WEIGHT</div>
+      </div>
+      <div class="domain-card" data-domain="4" data-weight="14">
+        <div class="domain-number">04</div>
+        <div class="domain-content">
+          <h4 class="domain-title">Guidelines for Responsible AI</h4>
+          <p class="domain-desc">Fairness, bias, transparency, explainability, Guardrails, Clarify, Model Monitor, and A2I.</p>
+          <div class="domain-meta">
+            <span class="weight-badge">14%</span>
+            <a href="#domain-4" class="domain-link">Study Guide →</a>
+          </div>
+        </div>
+        <div class="weight-bar" style="--weight: 14">
+          <div class="weight-fill"></div>
+        </div>
+      </div>
+      <div class="domain-card" data-domain="5" data-weight="14">
+        <div class="domain-number">05</div>
+        <div class="domain-content">
+          <h4 class="domain-title">Security, Compliance & Governance</h4>
+          <p class="domain-desc">IAM, encryption, prompt injection, data lineage, CloudTrail, Audit Manager, and the shared responsibility model.</p>
+          <div class="domain-meta">
+            <span class="weight-badge">14%</span>
+            <a href="#domain-5" class="domain-link">Study Guide →</a>
+          </div>
+        </div>
+        <div class="weight-bar" style="--weight: 14">
+          <div class="weight-fill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Study Sequence -->
+  <section class="sequence-section">
+    <div class="section-header">
+      <span class="section-tag">LEARNING PATH</span>
+      <h3 class="section-title">Suggested Study Sequence</h3>
+      <p class="section-desc">A 7-phase plan building from vocabulary to hands-on practice</p>
+    </div>
+    <div class="sequence-timeline">
+      <div class="timeline-item" data-phase="1">
+        <div class="phase-badge">Phase 1</div>
+        <div class="phase-content">
+          <h4>Vocabulary & Lifecycle</h4>
+          <p>Domain 1 guide + sketch one ML lifecycle for a business problem you know.</p>
+        </div>
+        <div class="phase-duration">~2 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="2">
+        <div class="phase-badge">Phase 2</div>
+        <div class="phase-content">
+          <h4>GenAI Building Blocks</h4>
+          <p>Domain 2 guide + list 3 GenAI use cases and 2 failure modes (hallucination, cost).</p>
+        </div>
+        <div class="phase-duration">~3 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="3">
+        <div class="phase-badge">Phase 3</div>
+        <div class="phase-content">
+          <h4>FMs in Production</h4>
+          <p>Domain 3 guide + practice explaining RAG, agents, and evaluation metrics out loud.</p>
+        </div>
+        <div class="phase-duration">~4 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="4">
+        <div class="phase-badge">Phase 4</div>
+        <div class="phase-content">
+          <h4>Responsibility & Trust</h4>
+          <p>Domain 4 guide + map tools (Guardrails, Clarify, Model Monitor, A2I) to risks.</p>
+        </div>
+        <div class="phase-duration">~2 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="5">
+        <div class="phase-badge">Phase 5</div>
+        <div class="phase-content">
+          <h4>Security & Governance</h4>
+          <p>Domain 5 guide + trace IAM → encryption → logging for a Bedrock workload on paper.</p>
+        </div>
+        <div class="phase-duration">~2 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="6">
+        <div class="phase-badge">Phase 6</div>
+        <div class="phase-content">
+          <h4>Service Mapping</h4>
+          <p>AWS services primer + drill "which service for which scenario?"</p>
+        </div>
+        <div class="phase-duration">~1.5 hours</div>
+      </div>
+      <div class="timeline-item" data-phase="7">
+        <div class="phase-badge">Phase 7</div>
+        <div class="phase-content">
+          <h4>Hands-on Practice</h4>
+          <p>Run Bedrock examples in a sandbox account; adjust inference parameters and observe changes.</p>
+        </div>
+        <div class="phase-duration">~3 hours</div>
+      </div>
+    </div>
+    <div class="sequence-total">
+      <span class="total-label">Estimated Total Study Time</span>
+      <span class="total-value">~17.5 hours</span>
+    </div>
+  </section>
+
+  <!-- Domain 1 Content -->
+  <section class="domain-content-section" id="domain-1">
+    <div class="content-nav">
+      <div class="nav-sticky">
+        <span class="nav-label">Jump to:</span>
+        <a href="#domain-1" class="nav-item active" data-target="domain-1">D1</a>
+        <a href="#domain-2" class="nav-item" data-target="domain-2">D2</a>
+        <a href="#domain-3" class="nav-item" data-target="domain-3">D3</a>
+        <a href="#domain-4" class="nav-item" data-target="domain-4">D4</a>
+        <a href="#domain-5" class="nav-item" data-target="domain-5">D5</a>
+      </div>
+    </div>
+    <div class="domain-body">
+      <div class="domain-header">
+        <div class="domain-tag-row">
+          <span class="domain-indicator" style="background: #FF9900">D1</span>
+          <span class="content-weight">20% of exam</span>
+        </div>
+        <h3 class="domain-body-title">Fundamentals of AI and ML</h3>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Core Concepts & Terminology</h4>
+        <div class="concept-grid">
+          <div class="concept-card">
+            <div class="concept-icon">🤖</div>
+            <h5>Artificial Intelligence</h5>
+            <p>Building systems that perform tasks requiring human-like intelligence: perception, language understanding, reasoning, recommendation, and decision support.</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">🧠</div>
+            <h5>Machine Learning</h5>
+            <p>Behavior improves from <strong>data</strong> and <strong>experience</strong> (training) rather than hand-coded rules. A model maps inputs to outputs; an algorithm learns that mapping.</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">🧬</div>
+            <h5>Deep Learning</h5>
+            <p>Neural networks with many layers learning hierarchical representations. Powers modern computer vision, NLP, and transformer-based language models.</p>
+          </div>
+          <div class="concept-card">
+            <div class="concept-icon">✨</div>
+            <h5>Generative AI</h5>
+            <p>Models learn to <strong>generate</strong> new content (text, images, audio, code) conditioned on prompts. Overlaps with ML and deep learning.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Inference Types</h4>
+        <div class="two-col-grid">
+          <div class="info-card">
+            <div class="card-header">
+              <span class="card-icon real-time">⚡</span>
+              <h5>Real-time (Online)</h5>
+            </div>
+            <p>Low-latency responses for chatbots, fraud scoring on a click.</p>
+          </div>
+          <div class="info-card">
+            <div class="card-header">
+              <span class="card-icon batch">📦</span>
+              <h5>Batch Inference</h5>
+            </div>
+            <p>Scoring large volumes asynchronously — overnight scoring of customers, bulk document processing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Data Types</h4>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">Labeled</span> vs <span class="tag">Unlabeled</span></td>
+              <td>Labeled: spam/not spam. Unlabeled: raw text for clustering or pre-training.</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Structured</span></td>
+              <td>Rows/columns in databases (tabular).</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Unstructured</span></td>
+              <td>PDFs, images, audio, free text.</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Time Series</span></td>
+              <td>Metrics over time (demand forecasting).</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Modalities</span></td>
+              <td>Text, image, audio, video; <strong>multimodal</strong> models use more than one.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Learning Paradigms</h4>
+        <div class="paradigm-stack">
+          <div class="paradigm-card supervised">
+            <div class="paradigm-header">
+              <span class="paradigm-badge">Supervised</span>
+              <span class="paradigm-type">Classification / Regression</span>
+            </div>
+            <p>Learn input→output from <strong>labeled examples</strong>. The model sees correct input-output pairs during training.</p>
+            <div class="paradigm-example">Example: spam detection, price prediction</div>
+          </div>
+          <div class="paradigm-card unsupervised">
+            <div class="paradigm-header">
+              <span class="paradigm-badge">Unsupervised</span>
+              <span class="paradigm-type">Clustering / Dimensionality Reduction</span>
+            </div>
+            <p>Find structure <strong>without labels</strong>. The model discovers patterns and groupings in data on its own.</p>
+            <div class="paradigm-example">Example: customer segmentation, anomaly detection</div>
+          </div>
+          <div class="paradigm-card reinforcement">
+            <div class="paradigm-header">
+              <span class="paradigm-badge">Reinforcement</span>
+              <span class="paradigm-type">Games / Robotics / Control</span>
+            </div>
+            <p>Learn via <strong>rewards/penalties</strong> from an environment. The model learns which actions maximize cumulative reward.</p>
+            <div class="paradigm-example">Example: game AI, robotics control, recommendation optimization</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Key Terms for Decisions & Ethics Questions</h4>
+        <div class="key-term-grid">
+          <div class="key-term">
+            <h5>Bias</h5>
+            <p>Systematic errors that hurt certain groups or scenarios.</p>
+          </div>
+          <div class="key-term">
+            <h5>Fairness</h5>
+            <p>Expectations that models do not unjustly disadvantage groups; definitions vary by context.</p>
+          </div>
+          <div class="key-term">
+            <h5>Variance</h5>
+            <p>Sensitivity to training data noise. <em>Overfitting</em> = high variance; <em>Underfitting</em> = high bias.</p>
+          </div>
+          <div class="key-term">
+            <h5>Training vs Inference</h5>
+            <p>Training learns parameters; inference applies the model to new data.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">When AI/ML Helps — When It Doesn't</h4>
+        <div class="two-col-grid">
+          <div class="info-card success">
+            <div class="card-header">
+              <span class="card-icon">✓</span>
+              <h5>Where AI/ML Adds Value</h5>
+            </div>
+            <ul class="card-list">
+              <li><strong>Scale:</strong> scoring millions of events faster than manual review.</li>
+              <li><strong>Automation:</strong> routing, triage, tagging, summarization, first-line support.</li>
+              <li><strong>Assisted decision-making:</strong> recommendations and risk scores with human oversight.</li>
+              <li><strong>Perception tasks:</strong> speech-to-text, object detection, document understanding.</li>
+            </ul>
+          </div>
+          <div class="info-card warning">
+            <div class="card-header">
+              <span class="card-icon">✗</span>
+              <h5>When AI/ML May Be Wrong</h5>
+            </div>
+            <ul class="card-list">
+              <li><strong>Deterministic guarantees</strong> required; probabilistic error cannot be tolerated.</li>
+              <li><strong>Cost exceeds benefit:</strong> model lifecycle costs more than the problem's value.</li>
+              <li><strong>Insufficient/untrusted data</strong> makes learning unreliable.</li>
+              <li><strong>Regulatory context</strong> demands interpretability or audit trails you cannot support.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">ML Development Lifecycle</h4>
+        <div class="lifecycle-flow">
+          <div class="lifecycle-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h6>Business Framing</h6>
+              <p>Define success metrics and constraints.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h6>Data</h6>
+              <p>Collection, labeling, cataloging, quality checks.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h6>EDA</h6>
+              <p>Distributions, missing values, leakage risks.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h6>Feature Engineering</h6>
+              <p>Cleaning, encoding, scaling.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h6>Training</h6>
+              <p>Choose algorithms, train, validate.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h6>Evaluation</h6>
+              <p>Technical metrics + business KPIs.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <h6>Deployment</h6>
+              <p>Batch or real-time endpoints, A/B tests.</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="lifecycle-step">
+            <div class="step-number">8</div>
+            <div class="step-content">
+              <h6>Monitoring</h6>
+              <p>Drift, quality, retraining triggers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Technical Metrics</h4>
+        <div class="metric-chips">
+          <span class="metric-chip">Accuracy</span>
+          <span class="metric-chip">Precision</span>
+          <span class="metric-chip">Recall</span>
+          <span class="metric-chip">F1 Score</span>
+          <span class="metric-chip">AUC-ROC</span>
+          <span class="metric-chip">Error Rate</span>
+        </div>
+      </div>
+
+      <div class="self-check">
+        <div class="check-header">
+          <span class="check-icon">✓</span>
+          <h4>Quick Self-Check</h4>
+        </div>
+        <ol class="check-list">
+          <li>Explain how <strong>supervised</strong> learning differs from <strong>unsupervised</strong> learning in one sentence each.</li>
+          <li>Name one strength and one weakness of using <strong>GenAI</strong> for customer support.</li>
+          <li>List three stages of the ML lifecycle between <strong>raw data</strong> and <strong>production monitoring</strong>.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain 2 Content -->
+  <section class="domain-content-section" id="domain-2">
+    <div class="domain-body">
+      <div class="domain-header">
+        <div class="domain-tag-row">
+          <span class="domain-indicator" style="background: #FF9900">D2</span>
+          <span class="content-weight">24% of exam</span>
+        </div>
+        <h3 class="domain-body-title">Fundamentals of GenAI</h3>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Core GenAI Concepts</h4>
+        <div class="concept-grid four-col">
+          <div class="concept-card compact">
+            <div class="concept-icon">🔢</div>
+            <h5>Tokens</h5>
+            <p>Models process text as subword pieces. Pricing, latency, and context limits are in tokens, not characters.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">✂️</div>
+            <h5>Chunking</h5>
+            <p>Splits long documents into segments that fit context windows for retrieval or summarization.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">📐</div>
+            <h5>Embeddings</h5>
+            <p>Dense vectors representing text. Similar meanings map to nearby vectors for semantic search.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">🔮</div>
+            <h5>Transformers</h5>
+            <p>Architecture enabling large-scale pre-training. Foundation models use transformer backbones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Foundation Model Lifecycle</h4>
+        <div class="fm-lifecycle">
+          <div class="fm-step">Data Selection</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Model Selection</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Pre-training</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Adaptation</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Evaluation</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Deployment</div>
+          <div class="fm-arrow">→</div>
+          <div class="fm-step">Feedback</div>
+        </div>
+        <p class="fm-note">Adaptation includes fine-tuning, prompting, and tool integration.</p>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Advantages vs Disadvantages</h4>
+        <div class="two-col-grid">
+          <div class="info-card success">
+            <div class="card-header"><span class="card-icon">✓</span><h5>GenAI Advantages</h5></div>
+            <ul class="card-list">
+              <li><strong>Adaptability</strong> across tasks with prompting and light integration.</li>
+              <li><strong>Rapid prototyping</strong> of assistants, summarization, drafting, code help.</li>
+              <li><strong>Developer productivity</strong> when used with review and tests.</li>
+            </ul>
+          </div>
+          <div class="info-card warning">
+            <div class="card-header"><span class="card-icon">✗</span><h5>GenAI Disadvantages & Risks</h5></div>
+            <ul class="card-list">
+              <li><strong>Hallucinations:</strong> plausible but false outputs.</li>
+              <li><strong>Nondeterminism:</strong> temperature changes outputs run-to-run.</li>
+              <li><strong>Interpretability:</strong> hard to audit internal reasoning.</li>
+              <li><strong>Compliance:</strong> data handling, IP, and licensing constraints.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">AWS GenAI Services</h4>
+        <table class="data-table service-table">
+          <thead>
+            <tr>
+              <th>Need</th>
+              <th>AWS Building Block</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Managed FM access</td>
+              <td><span class="aws-tag bedrock">Amazon Bedrock</span></td>
+            </tr>
+            <tr>
+              <td>Experimentation / UI prototyping</td>
+              <td><span class="aws-tag">Amazon Bedrock PartyRock</span></td>
+            </tr>
+            <tr>
+              <td>Pre-built models & notebooks</td>
+              <td><span class="aws-tag">SageMaker JumpStart</span></td>
+            </tr>
+            <tr>
+              <td>Enterprise Q&A on company data</td>
+              <td><span class="aws-tag">Amazon Q Business</span></td>
+            </tr>
+            <tr>
+              <td>Developer assistance in the IDE</td>
+              <td><span class="aws-tag">Amazon Q Developer</span></td>
+            </tr>
+            <tr>
+              <td>AWS-native multimodal FMs</td>
+              <td><span class="aws-tag nova">Amazon Nova</span> <span class="model-note">(family name)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Cost Tradeoffs</h4>
+        <div class="tradeoff-grid">
+          <div class="tradeoff-card">
+            <h5>On-demand vs Provisioned</h5>
+            <p>Token usage for variable traffic vs steady throughput capacity.</p>
+          </div>
+          <div class="tradeoff-card">
+            <h5>Availability vs Cost</h5>
+            <p>Multi-AZ patterns increase resilience but also cost.</p>
+          </div>
+          <div class="tradeoff-card">
+            <h5>Model Size vs Performance</h5>
+            <p>Larger models are more capable but higher latency and price per request.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="self-check">
+        <div class="check-header">
+          <span class="check-icon">✓</span>
+          <h4>Quick Self-Check</h4>
+        </div>
+        <ol class="check-list">
+          <li>Define <strong>embedding</strong> in your own words and give one use case.</li>
+          <li>Name two disadvantages of GenAI that matter in <strong>regulated</strong> industries.</li>
+          <li>Assign each: Bedrock → <strong>managed FM consumption</strong>; Q Business → <strong>enterprise knowledge assistant</strong>; JumpStart → <strong>ML hub with pre-trained models</strong>.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain 3 Content -->
+  <section class="domain-content-section featured-domain" id="domain-3">
+    <div class="domain-body">
+      <div class="domain-header">
+        <div class="domain-tag-row">
+          <span class="domain-indicator" style="background: #FF9900">D3</span>
+          <span class="content-weight">28% of exam</span>
+          <span class="highest-badge">HIGHEST WEIGHT</span>
+        </div>
+        <h3 class="domain-body-title">Applications of Foundation Models</h3>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">FM Application Design</h4>
+        <div class="concept-grid four-col">
+          <div class="concept-card compact">
+            <div class="concept-icon">💰</div>
+            <h5>Cost</h5>
+            <p>Token pricing, provisioned throughput, and inference cost per request.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">⚡</div>
+            <h5>Latency</h5>
+            <p>Response time requirements for real-time vs batch use cases.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">📝</div>
+            <h5>Context Window</h5>
+            <p>How much text the model can process in a single call.</p>
+          </div>
+          <div class="concept-card compact">
+            <div class="concept-icon">🌐</div>
+            <h5>Multilingual</h5>
+            <p>Support for multiple languages and regional availability.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Inference Parameters</h4>
+        <div class="param-grid">
+          <div class="param-card">
+            <div class="param-header">
+              <h5>Temperature</h5>
+              <div class="param-visual">
+                <div class="temp-scale">
+                  <span class="temp-label low">0.0</span>
+                  <div class="temp-bar"></div>
+                  <span class="temp-label high">1.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="param-desc">
+              <p><strong>Low (0.1):</strong> Focused, deterministic, consistent.</p>
+              <p><strong>High (0.9):</strong> Creative, diverse, surprising.</p>
+            </div>
+          </div>
+          <div class="param-card">
+            <div class="param-header">
+              <h5>Max Tokens</h5>
+              <div class="param-visual">
+                <div class="token-visual">
+                  <span class="token-chip">100</span>
+                  <span class="token-chip">500</span>
+                  <span class="token-chip">1000</span>
+                  <span class="token-chip">4096</span>
+                </div>
+              </div>
+            </div>
+            <div class="param-desc">
+              <p><strong>Caps output length</strong> and therefore cost and runtime. May truncate answers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">RAG — Retrieval Augmented Generation</h4>
+        <div class="rag-diagram">
+          <div class="rag-step">
+            <div class="rag-icon">📄</div>
+            <p>Documents</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step">
+            <div class="rag-icon">✂️</div>
+            <p>Chunking</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step">
+            <div class="rag-icon">📐</div>
+            <p>Embeddings</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step">
+            <div class="rag-icon">🔍</div>
+            <p>Vector Store</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step">
+            <div class="rag-icon">🔎</div>
+            <p>Retrieval</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step">
+            <div class="rag-icon">🤖</div>
+            <p>Foundation Model</p>
+          </div>
+          <div class="rag-arrow">→</div>
+          <div class="rag-step final">
+            <div class="rag-icon">✅</div>
+            <p>Grounded Answer</p>
+          </div>
+        </div>
+        <div class="rag-note">
+          <strong>Key benefit:</strong> Cuts dependence on model memorization, grounds answers in <em>your</em> content. AWS: <strong>Bedrock Knowledge Bases</strong>.
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Customization Approaches</h4>
+        <div class="customize-stack">
+          <div class="customize-card">
+            <div class="customize-header">
+              <span class="approach-tag">In-context Learning</span>
+              <span class="complexity-badge easy">Fastest</span>
+            </div>
+            <p>Use prompts and examples to steer behavior without changing model weights.</p>
+            <div class="tradeoffs">
+              <span class="pro">+ Fast to iterate</span>
+              <span class="con">- Token cost; context limits</span>
+            </div>
+          </div>
+          <div class="customize-card">
+            <div class="customize-header">
+              <span class="approach-tag">RAG</span>
+              <span class="complexity-badge moderate">Moderate</span>
+            </div>
+            <p>Ground generation on your private documents via retrieval.</p>
+            <div class="tradeoffs">
+              <span class="pro">+ Better grounding on private docs</span>
+              <span class="con">- Needs solid retrieval and chunking</span>
+            </div>
+          </div>
+          <div class="customize-card">
+            <div class="customize-header">
+              <span class="approach-tag">Fine-tuning</span>
+              <span class="complexity-badge advanced">Advanced</span>
+            </div>
+            <p>Specialize model behavior on curated training data.</p>
+            <div class="tradeoffs">
+              <span class="pro">+ Can specialize behavior</span>
+              <span class="con">- Needs curated data and MLOps discipline</span>
+            </div>
+          </div>
+          <div class="customize-card">
+            <div class="customize-header">
+              <span class="approach-tag">Pre-training</span>
+              <span class="complexity-badge expert">Expert</span>
+            </div>
+            <p>Extremely expensive large-scale training on broad corpora.</p>
+            <div class="tradeoffs">
+              <span class="pro">+ Maximum control</span>
+              <span class="con">- Rarely relevant except conceptually</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Prompt Engineering Techniques</h4>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Technique</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">Zero-shot</span></td>
+              <td>Instruction only, no examples. Model infers task from description.</td>
+            </tr>
+            <tr>
+              <td><span class="tag">One-shot / Few-shot</span></td>
+              <td>Include examples to steer format and reasoning.</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Chain-of-Thought</span></td>
+              <td>Ask model to show intermediate reasoning steps. Improves complex tasks; increases tokens.</td>
+            </tr>
+            <tr>
+              <td><span class="tag">Templates</span></td>
+              <td>Reusable prompts with variables for production consistency.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Evaluation Metrics</h4>
+        <div class="metric-chips">
+          <span class="metric-chip blue">BLEU</span>
+          <span class="metric-chip blue">ROUGE</span>
+          <span class="metric-chip purple">BERTScore</span>
+          <span class="metric-chip green">Human Eval</span>
+          <span class="metric-chip orange">Benchmarks</span>
+          <span class="metric-chip teal">Faithfulness</span>
+        </div>
+        <p class="fm-note">BLEU/ROUGE: overlap-based text similarity. BERTScore: semantic similarity using embeddings.</p>
+      </div>
+
+      <div class="self-check">
+        <div class="check-header">
+          <span class="check-icon">✓</span>
+          <h4>Quick Self-Check</h4>
+        </div>
+        <ol class="check-list">
+          <li>Explain <strong>RAG</strong> in three sentences: problem it solves, mechanism, one AWS component name.</li>
+          <li>When would you <strong>raise temperature</strong> vs <strong>lower</strong> it for a support bot?</li>
+          <li>Name two <strong>prompt-specific</strong> risks vs two <strong>retrieval-specific</strong> risks in a RAG system.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain 4 Content -->
+  <section class="domain-content-section" id="domain-4">
+    <div class="domain-body">
+      <div class="domain-header">
+        <div class="domain-tag-row">
+          <span class="domain-indicator" style="background: #FF9900">D4</span>
+          <span class="content-weight">14% of exam</span>
+        </div>
+        <h3 class="domain-body-title">Guidelines for Responsible AI</h3>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Pillars of Responsible AI</h4>
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">⚖️</div>
+            <h5>Fairness & Bias</h5>
+            <p>Systematic skew that disadvantages groups. Mitigate via diverse data, bias testing, and regular audits.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌍</div>
+            <h5>Inclusivity</h5>
+            <p>Datasets and evaluation cover diverse users and edge cases.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🛡️</div>
+            <h5>Robustness</h5>
+            <p>Stable behavior under noise, typos, and adversarial prompts.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔒</div>
+            <h5>Safety</h5>
+            <p>Preventing harmful outputs and unsafe recommendations.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🎯</div>
+            <h5>Veracity</h5>
+            <p>Truthfulness and grounding. Related to hallucination risk.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">AWS Responsible AI Tools</h4>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="aws-tag bedrock">Bedrock Guardrails</span>
+            </div>
+            <p>Policy controls on prompts and completions — topic filtering, denied content, sensitive information handling. Configure details to match your requirements.</p>
+          </div>
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="aws-tag">SageMaker Clarify</span>
+            </div>
+            <p>Bias and explainability analysis for ML workflows. Detect bias during data prep and model evaluation.</p>
+          </div>
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="aws-tag">SageMaker Model Monitor</span>
+            </div>
+            <p>Drift and quality monitoring in production. Alerts when model behavior degrades.</p>
+          </div>
+          <div class="tool-card">
+            <div class="tool-header">
+              <span class="aws-tag">Augmented AI (A2I)</span>
+            </div>
+            <p>Human review workflows when automation is insufficient. Route low-confidence predictions to humans.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Legal & Reputational Risks in GenAI</h4>
+        <div class="risk-list">
+          <div class="risk-item">
+            <span class="risk-icon">⚡</span>
+            <p><strong>Intellectual property</strong> disputes around training data and outputs.</p>
+          </div>
+          <div class="risk-item">
+            <span class="risk-icon">📋</span>
+            <p><strong>Discriminatory outputs</strong> and loss of trust.</p>
+          </div>
+          <div class="risk-item">
+            <span class="risk-icon">🏥</span>
+            <p><strong>End-user harm</strong> from bad advice in sensitive domains.</p>
+          </div>
+          <div class="risk-item">
+            <span class="risk-icon">🎭</span>
+            <p><strong>Hallucinations</strong> presented as facts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Model Documentation</h4>
+        <div class="model-card-info">
+          <div class="model-card-header">
+            <h5>📋 SageMaker Model Cards</h5>
+          </div>
+          <p>Document model details, limitations, and evaluation results. Serve as a communication artifact between teams and a transparency artifact for stakeholders.</p>
+          <div class="model-card-uses">
+            <span class="use-tag">Purpose & Intended Use</span>
+            <span class="use-tag">Training Data Summary</span>
+            <span class="use-tag">Evaluation Results</span>
+            <span class="use-tag">Known Limitations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="self-check">
+        <div class="check-header">
+          <span class="check-icon">✓</span>
+          <h4>Quick Self-Check</h4>
+        </div>
+        <ol class="check-list">
+          <li>Give one example each of <strong>bias risk</strong> and <strong>robustness risk</strong> in a customer chatbot.</li>
+          <li>Name two AWS services/tools used for <strong>bias detection/monitoring</strong> or <strong>human review</strong>.</li>
+          <li>What is the purpose of a <strong>model card</strong>?</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain 5 Content -->
+  <section class="domain-content-section" id="domain-5">
+    <div class="domain-body">
+      <div class="domain-header">
+        <div class="domain-tag-row">
+          <span class="domain-indicator" style="background: #FF9900">D5</span>
+          <span class="content-weight">14% of exam</span>
+        </div>
+        <h3 class="domain-body-title">Security, Compliance & Governance</h3>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">Securing AI Systems on AWS</h4>
+        <div class="security-grid">
+          <div class="security-card">
+            <div class="security-icon">🔑</div>
+            <h5>Identity & Access</h5>
+            <p>IAM roles with least privilege. Separate data access from model invocation. Avoid long-lived keys where roles suffice.</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🔐</div>
+            <h5>Encryption</h5>
+            <p>Data at rest (AWS KMS) and in transit (TLS). Understand key management and rotation patterns for regulated workloads.</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🌐</div>
+            <h5>Network Isolation</h5>
+            <p>Amazon VPC, security groups, and PrivateLink patterns reduce exposure to the public internet.</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon">🔍</div>
+            <h5>Data Protection & Discovery</h5>
+            <p>Amazon Macie discovers sensitive data in S3. Combine with classification and access policies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">AI-Specific Threats</h4>
+        <div class="threat-grid">
+          <div class="threat-card">
+            <div class="threat-header">
+              <span class="threat-level critical">CRITICAL</span>
+            </div>
+            <h5>Prompt Injection</h5>
+            <p>Untrusted text in prompts manipulates model behavior — can exfiltrate data or bypass guardrails.</p>
+          </div>
+          <div class="threat-card">
+            <div class="threat-header">
+              <span class="threat-level high">HIGH</span>
+            </div>
+            <h5>Data Exfiltration</h5>
+            <p>Clever prompts or tool misuse in agentic flows can leak sensitive data from retrieval or context.</p>
+          </div>
+          <div class="threat-card">
+            <div class="threat-header">
+              <span class="threat-level moderate">MODERATE</span>
+            </div>
+            <h5>Poisoning</h5>
+            <p>Manipulation of knowledge sources used in RAG — adversarial content indexed and later retrieved as trusted.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <h4 class="group-title">AWS Audit & Compliance Services</h4>
+        <div class="audit-grid">
+          <div class="audit-card">
+            <h5>CloudTrail</h5>
+            <p>Records who called which AWS API in your account. Essential for security auditing.</p>
+          </div>
+          <div class="audit-card">
+            <h5>Config</h5>
+            <p>Resource configuration history and rules. Track configuration drift over time.</p>
+          </div>
+          <div class="audit-card">
+            <h5>Audit Manager</h5>
+            <p>Automated evidence collection for compliance frameworks.</p>
+          </div>
+          <div class="audit-card">
+            <h5>Artifact</h5>
+            <p>On-demand compliance reports and agreements (SOC, PCI, HIPAA attestations).</p>
+          </div>
+          <div class="audit-card">
+            <h5>Inspector</h5>
+            <p>Workload vulnerability scanning — knows roles in the shared responsibility model.</p>
+          </div>
+          <div class="audit-card">
+            <h5>Trusted Advisor</h5>
+            <p>Cost, security, and fault-tolerance guidance at a high level.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-group">
+        <div class="shared-responsibility">
+          <div class="sr-header">
+            <h4>Shared Responsibility Model</h4>
+          </div>
+          <div class="sr-diagram">
+            <div class="sr-layer aws">
+              <span class="layer-label">AWS</span>
+              <p class="layer-desc">Secures the cloud: infrastructure, hardware, managed services.</p>
+            </div>
+            <div class="sr-divider">
+              <span class="divider-icon">⚖️</span>
+              <span class="divider-text">Shared Boundary</span>
+              <span class="divider-icon">⚖️</span>
+            </div>
+            <div class="sr-layer customer">
+              <span class="layer-label">YOU</span>
+              <p class="layer-desc">Data, IAM policies, encryption config, network paths, prompts, retrieval pipelines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="self-check">
+        <div class="check-header">
+          <span class="check-icon">✓</span>
+          <h4>Quick Self-Check</h4>
+        </div>
+        <ol class="check-list">
+          <li>Name <strong>two</strong> security controls and <strong>one</strong> AI-specific threat from this domain.</li>
+          <li>Which service primarily records <strong>who called which AWS API</strong> in your account?</li>
+          <li>Why does <strong>RAG</strong> increase the importance of <strong>knowledge-base access control</strong>?</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Examples Section -->
+  <section class="code-section">
+    <div class="section-header">
+      <span class="section-tag">HANDS-ON</span>
+      <h3 class="section-title">Code Examples</h3>
+      <p class="section-desc">Run these to connect API shapes to concepts</p>
+    </div>
+    <div class="code-grid">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="code-lang">Python</span>
+          <span class="code-file">bedrock_converse.py</span>
+        </div>
+        <p class="code-desc">Invoke a foundation model with the Converse API — messages, inference parameters, streaming responses.</p>
+        <div class="code-tags">
+          <span class="code-tag">boto3</span>
+          <span class="code-tag">Bedrock</span>
+          <span class="code-tag">Converse API</span>
+        </div>
+      </div>
+      <div class="code-card">
+        <div class="code-header">
+          <span class="code-lang">Python</span>
+          <span class="code-file">bedrock_embeddings.py</span>
+        </div>
+        <p class="code-desc">Generate embeddings for RAG-style workflows using Amazon Bedrock embeddings models.</p>
+        <div class="code-tags">
+          <span class="code-tag">embeddings</span>
+          <span class="code-tag">RAG</span>
+          <span class="code-tag">vector</span>
+        </div>
+      </div>
+      <div class="code-card">
+        <div class="code-header">
+          <span class="code-lang">Python</span>
+          <span class="code-file">rag_similarity_concept.py</span>
+        </div>
+        <p class="code-desc">Cosine similarity between vectors — the core retrieval concept for ranking chunks in RAG.</p>
+        <div class="code-tags">
+          <span class="code-tag">cosine similarity</span>
+          <span class="code-tag">retrieval</span>
+          <span class="code-tag">numpy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Resources -->
+  <section class="resources-section">
+    <div class="section-header">
+      <span class="section-tag">REFERENCES</span>
+      <h3 class="section-title">Official AWS Resources</h3>
+    </div>
+    <div class="resource-grid">
+      <a href="https://aws.amazon.com/certification/certified-ai-practitioner/" class="resource-card" target="_blank">
+        <div class="resource-icon">🏆</div>
+        <h5>AWS Certified AI Practitioner</h5>
+        <p>Certification home page</p>
+      </a>
+      <a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01.html" class="resource-card" target="_blank">
+        <div class="resource-icon">📋</div>
+        <h5>Exam Guide (AIF-C01)</h5>
+        <p>Domains, tasks, and policies</p>
+      </a>
+      <a href="https://skillbuilder.aws/" class="resource-card" target="_blank">
+        <div class="resource-icon">🎓</div>
+        <h5>AWS Skill Builder</h5>
+        <p>Training aligned with AWS Certification</p>
+      </a>
+      <a href="https://aws.amazon.com/architecture/well-architected/" class="resource-card" target="_blank">
+        <div class="resource-icon">🏗️</div>
+        <h5>Well-Architected</h5>
+        <p>Operational excellence, security, cost, sustainability</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <p>This guide is <strong>educational</strong> and not affiliated with AWS. Exams, service names, and guides change — check AWS documentation before scheduling your test or designing production systems.</p>
+      </div>
+      <div class="footer-meta">
+        <span>AWS AI Practitioner Study Guide</span>
+        <span class="divider">•</span>
+        <span>AIF-C01</span>
+        <span class="divider">•</span>
+        <span>Foundational Level</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
