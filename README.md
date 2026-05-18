@@ -89,8 +89,9 @@ Open [`web/index.html`](web/index.html) in your browser for an interactive study
 | **3** | FMs in production      | Domain 3 guide; practice explaining RAG, agents, and evaluation metrics out loud.           |
 | **4** | Responsibility & trust | Domain 4 guide; map tools (Guardrails, Clarify, Model Monitor, A2I) to risks.               |
 | **5** | Security & governance  | Domain 5 guide; trace IAM → encryption → logging for a Bedrock workload on paper.           |
-| **6** | Service mapping        | `guides/06-aws-services-primer.md`; drill "which service for which scenario?"               |
-| **7** | Hands-on               | Run Bedrock examples in a sandbox account; adjust inference parameters and observe changes. |
+| **6** | Service mapping        | `06-aws-services.md`; drill "which service for which scenario?"                             |
+| **7** | AI services lookup     | `10-aws-ai-services-lookup.md`; use as a visual lookup page for detailed service selection.  |
+| **8** | Hands-on               | Run Bedrock examples in a sandbox account; adjust inference parameters and observe changes. |
 
 ---
 
@@ -98,12 +99,17 @@ Open [`web/index.html`](web/index.html) in your browser for an interactive study
 
 | Guide                                       | File                                                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Domain 1: AI & ML fundamentals              | [guides/01-fundamentals-ai-and-ml.md](guides/01-fundamentals-ai-and-ml.md)                       |
-| Domain 2: Generative AI fundamentals        | [guides/02-fundamentals-of-genai.md](guides/02-fundamentals-of-genai.md)                         |
-| Domain 3: Foundation models in applications | [guides/03-applications-of-foundation-models.md](guides/03-applications-of-foundation-models.md) |
-| Domain 4: Responsible AI                    | [guides/04-responsible-ai.md](guides/04-responsible-ai.md)                                       |
-| Domain 5: Security, compliance, governance  | [guides/05-security-compliance-governance.md](guides/05-security-compliance-governance.md)       |
-| AWS services at a glance (exam-oriented)     | [guides/06-aws-services-primer.md](guides/06-aws-services-primer.md)                             |
+| Domain 1: AI & ML fundamentals              | [01-ai-ml-fundamentals.md](01-ai-ml-fundamentals.md)                                             |
+| Domain 2: Generative AI fundamentals        | [02-generative-ai-fundamentals.md](02-generative-ai-fundamentals.md)                             |
+| Domain 3: Foundation model applications     | [03-foundation-model-applications.md](03-foundation-model-applications.md)                       |
+| Domain 4: Responsible AI                    | [04-guidelines-responsible-ai.md](04-guidelines-responsible-ai.md)                               |
+| Domain 5: Security, compliance, governance  | [05-security-compliance-governance.md](05-security-compliance-governance.md)                     |
+| AWS services reference                       | [06-aws-services.md](06-aws-services.md)                                                         |
+| Prompt engineering                           | [07-prompt-engineering.md](07-prompt-engineering.md)                                             |
+| Practice questions                           | [08-practice-questions.md](08-practice-questions.md)                                             |
+| Resources                                    | [09-resources.md](09-resources.md)                                                               |
+| Visual AWS AI services lookup                | [10-aws-ai-services-lookup.md](10-aws-ai-services-lookup.md)                                     |
+| Complete combined guide                      | [aws-ai-practitioner-complete-guide.md](aws-ai-practitioner-complete-guide.md)                   |
 
 ---
 
