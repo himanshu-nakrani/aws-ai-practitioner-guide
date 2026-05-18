@@ -1,4 +1,4 @@
-# AWS AI Services Lookup Page
+# AWS AI Services
 ## Visual, Exam-Focused Reference for Every AWS AI Service Covered
 
 <p align="center">
